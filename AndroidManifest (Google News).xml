@@ -1,0 +1,423 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2022057534" android:versionName="5.50.0.433421834" android:installLocation="0" android:compileSdkVersion="32" android:compileSdkVersionCodename="Tiramisu" package="com.google.android.apps.magazines" platformBuildVersionCode="32" platformBuildVersionName="Tiramisu">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <supports-screens android:smallScreens="false" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission-sdk-23 android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission-sdk-23 android:name="com.android.vending.BILLING"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO"/>
+            <data android:scheme="mailto"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <package android:name="com.android.vending"/>
+        <package android:name="com.google.android.youtube"/>
+        <package android:name="com.google.android.music"/>
+        <package android:name="com.google.android.apps.magazines"/>
+        <package android:name="com.google.android.videos"/>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http" android:host="www.example.com"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+    </queries>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <application android:theme="@id/0x7F1502DE" android:label="@id/0x7F14005C" android:icon="@id/0x7F110000" android:name="com.google.apps.dots.android.newsstand.NSApplication" android:backupAgent="com.google.apps.dots.android.modules.backup.NSBackupAgent" android:hardwareAccelerated="true" android:supportsRtl="true" android:restrictedAccountType="com.google" android:banner="@id/0x7F110000" android:fullBackupOnly="false" android:usesCleartextTraffic="true" android:resizeableActivity="true" android:roundIcon="@id/0x7F11000A" android:isSplitRequired="true" android:localeConfig="@id/0x7F18001B">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0C0044"/>
+        <meta-data android:name="com.google.android.backup.api_key" android:value="@id/0x7F14008E"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBneVqr0A8NzRIingXFNWOTjwQSYwFggVY"/>
+        <meta-data android:name="com.google.android.partnersetup.RLZ_BOUNTY_ACCESS_POINT" android:value="@id/0x7F1404D5"/>
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
+        <activity android:theme="@id/0x7F1502E3" android:label="@id/0x7F1402C2" android:name="com.google.apps.dots.android.app.activity.CurrentsStartActivity" android:exported="true" android:launchMode="1" android:configChanges="1056">
+            <meta-data android:name="android.metadata.SLICE_URI" android:value="content://com.google.android.apps.magazines.slices/headlines"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.modules.settings.contentedition.ContentEditionSettingsActivity" android:exported="false" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.modules.settings.contentedition.ContentEditionSearchActivity" android:exported="false" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F1502E3" android:label="@id/0x7F1402C2" android:name="com.google.apps.dots.android.newsstand.activity.DeepLinkActivity" android:exported="true" android:launchMode="2" android:configChanges="1184">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="*.google.com" android:pathPrefix="/newsstand/s/"/>
+                <data android:scheme="http" android:host="google.com" android:pathPrefix="/newsstand/s/"/>
+                <data android:scheme="https" android:host="*.google.com" android:pathPrefix="/newsstand/s/"/>
+                <data android:scheme="https" android:host="google.com" android:pathPrefix="/newsstand/s/"/>
+                <data android:scheme="http" android:host="*.google.com" android:pathPrefix="/magazines/reader"/>
+                <data android:scheme="http" android:host="google.com" android:pathPrefix="/magazines/reader"/>
+                <data android:scheme="https" android:host="*.google.com" android:pathPrefix="/magazines/reader"/>
+                <data android:scheme="https" android:host="google.com" android:pathPrefix="/magazines/reader"/>
+                <data android:scheme="http" android:host="google.com" android:pathPrefix="/newsstand/web"/>
+                <data android:scheme="https" android:host="google.com" android:pathPrefix="/newsstand/web"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/s/"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/stories"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/publications"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/topics"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/articles"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/foryou"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/topstories"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/my"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/settings"/>
+                <data android:scheme="https" android:host="*.news.google.com" android:pathPrefix="/android/covid19/map"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/s/"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/stories"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/publications"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/topics"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/articles"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/foryou"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/topstories"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/my"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/settings"/>
+                <data android:scheme="https" android:host="news.google.com" android:pathPrefix="/android/covid19/map"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/s/"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/stories"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/publications"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/topics"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/articles"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/foryou"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/topstories"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/my"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/settings"/>
+                <data android:scheme="http" android:host="*.news.google.com" android:pathPrefix="/android/covid19/map"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/s/"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/stories"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/publications"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/topics"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/articles"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/foryou"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/topstories"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/my"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/settings"/>
+                <data android:scheme="http" android:host="news.google.com" android:pathPrefix="/android/covid19/map"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="currents"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="magazines"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="newsstand"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1502DD" android:label="@id/0x7F1404FB" android:name="com.google.apps.dots.android.newsstand.preference.SettingsActivity" android:exported="true" android:launchMode="1" android:configChanges="32">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.NOTIFICATION_PREFERENCES"/>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F15029A" android:name="com.google.apps.dots.android.newsstand.activity.WebviewActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F15029A" android:name="com.google.apps.dots.android.newsstand.home.HomeActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DD" android:name="com.google.apps.dots.android.newsstand.psv.PsvChallengeActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502E1" android:name="com.google.apps.dots.android.modules.pii.UserDataCollectionActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F15029A" android:name="com.google.apps.dots.android.newsstand.reading.ArticleReadingActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.activity.HeaderEditionActivity" android:exported="false" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.activity.MagazinePagerActivity" android:exported="false" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1506A6" android:name="com.google.apps.dots.android.newsstand.edition.VideoEditionActivity" android:exported="false" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DC" android:label="@id/0x7F14020E" android:name="com.google.apps.dots.android.newsstand.media.ImagePagerActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1506A4" android:name="com.google.apps.dots.android.newsstand.media.VideoActivity" android:exported="false" android:launchMode="1" android:configChanges="1184"/>
+        <activity android:name="com.google.apps.dots.android.newsstand.activity.magazines.WebPartActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DD" android:label="@id/0x7F140133" android:name="com.google.apps.dots.android.newsstand.preference.denylist.DenylistEditorActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F150128" android:name="com.google.apps.dots.android.newsstand.drawer.HelpFeedbackDialogActivity" android:exported="true" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.saved.SavedActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.home.following.FavoritesDetailActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.activity.ActivityHistoryActivity" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.home.library.favorites.FavoritesDetailActivityV2" android:exported="false" android:launchMode="1" android:configChanges="32"/>
+        <activity android:label="@id/0x7F1400F7" android:icon="@id/0x7F08047F" android:name="com.google.apps.dots.android.modules.share.SendTextToClipboardActivity" android:exported="false" android:noHistory="true"/>
+        <activity android:theme="@id/0x7F1502DE" android:label="@id/0x7F1404DB" android:name="com.google.apps.dots.android.newsstand.search.SearchActivity" android:exported="true" android:launchMode="1" android:configChanges="32">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.modules.contextualquestion.ContextualQuestionSearchActivity" android:exported="true" android:launchMode="1" android:screenOrientation="1" android:configChanges="32">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.modules.app.blocking.AppBlockingActivity" android:exported="false" android:launchMode="2" android:screenOrientation="1"/>
+        <meta-data android:name="android.app.default_searchable" android:value="com.google.apps.dots.android.newsstand.search.SearchActivity"/>
+        <activity android:theme="@id/0x7F1502DE" android:name="com.google.apps.dots.android.newsstand.search.SuggestAllActivity" android:exported="false"/>
+        <activity android:theme="@id/0x0103000F" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="4016"/>
+        <activity android:theme="@id/0x7F1502DF" android:name="com.google.apps.dots.android.newsstand.activity.SendKitActivity" android:exported="false"/>
+        <activity android:name="com.google.apps.dots.android.modules.pandemic.PandemicActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.google.apps.dots.android.newsstand.garamond.PreviewGaramondActivity" android:exported="false"/>
+        <activity android:name="com.google.apps.dots.android.newsstand.garamond.GaramondCatalogActivity" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.service.SyncerService" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.service.SyncerJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.service.NotificationPushMessageJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.service.NotificationPushMessageJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.service.BriefingJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.service.BriefingService" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.auth.AuthRetryService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.apps.dots.android.newsstand.service.BriefingReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.apps.dots.android.newsstand.service.BRIEFING"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.apps.dots.android.newsstand.appwidget.NewsWidgetProvider" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@id/0x7F18000A"/>
+        </receiver>
+        <service android:name="com.google.apps.dots.android.newsstand.appwidget.NewsWidgetJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.appwidget.NewsWidgetRemoteViewsService" android:permission="android.permission.BIND_REMOTEVIEWS" android:exported="false"/>
+        <receiver android:name="com.google.apps.dots.android.newsstand.receiver.BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:label="@id/0x7F14005C" android:name="com.google.apps.dots.android.newsstand.provider.NSContentProvider" android:exported="false" android:multiprocess="false" android:authorities="com.google.android.apps.magazines" android:syncable="false"/>
+        <provider android:label="@id/0x7F14005C" android:name="com.google.apps.dots.android.modules.provider.WebDataContentProvider" android:exported="true" android:multiprocess="false" android:authorities="com.google.android.apps.magazines.webdata" android:syncable="false"/>
+        <provider android:name="com.google.apps.dots.android.modules.slices.NewsSliceProvider" android:exported="true" android:authorities="com.google.android.apps.magazines.slices"/>
+        <activity android:theme="@id/0x7F150694" android:name="com.google.apps.dots.android.newsstand.activity.CrashReportActivity" android:exported="false" android:process=":feedback" android:taskAffinity="com.google.apps.dots.android.newsstand.crash" android:clearTaskOnLaunch="true" android:excludeFromRecents="true" android:launchMode="2" android:noHistory="true"/>
+        <activity android:name="com.google.android.libraries.accountlinking.activity.AccountLinkingActivity" android:exported="true" android:process="" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.google.apps.dots.android.newsstand" android:path="oauth2redirect2"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.apps.dots.android.newsstand.gcm.NSFirebaseMessagingService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.apps.dots.android.newsstand.service.SyncAdapterService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@id/0x7F180019"/>
+        </service>
+        <service android:name="com.google.apps.dots.android.newsstand.notifications.NotificationActionIntentService" android:exported="false"/>
+        <receiver android:name="com.google.apps.dots.android.newsstand.pushmessage.PushMessageRegistrationAppUpdateBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.apps.dots.android.newsstand.notifications.NotificationOpenTrampolineActivity" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.notifications.ShowNotificationIntentService" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.newsstand.notifications.NotificationKnownActionIntentService" android:exported="false"/>
+        <service android:name="com.google.apps.dots.android.modules.reading.customtabs.CustomTabsActionService" android:exported="true">
+            <intent-filter>
+                <action android:name="save"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x01030055" android:name="com.google.apps.dots.android.modules.reading.customtabs.CustomTabsTrampolineActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.clearcut_client" android:resource="@id/0x7F180001"/>
+        <service android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService" android:enabled="false" android:exported="false" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.clearcut_client" android:resource="@id/0x7F130007"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.consentverifier" android:resource="@id/0x7F130008"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.notifications.platform" android:resource="@id/0x7F13000B"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.internal.growth.growthkit" android:resource="@id/0x7F130009"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.mdi.sync" android:resource="@id/0x7F13000A"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.apps.magazines" android:resource="@id/0x7F130006"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.onegoogle" android:resource="@id/0x7F13000C"/>
+            <meta-data android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.performance.primes" android:resource="@id/0x7F13000D"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.performance.primes" android:resource="@id/0x7F13000E"/>
+        </service>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.consentverifier" android:resource="@id/0x7F180002"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.notifications.platform" android:resource="@id/0x7F180005"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.internal.growth.growthkit" android:resource="@id/0x7F180003"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.mdi.sync" android:resource="@id/0x7F180004"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.apps.magazines" android:resource="@id/0x7F180000"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.onegoogle" android:resource="@id/0x7F180006"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.performance.primes" android:resource="@id/0x7F180007"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F1505EC" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.google.android.apps.magazines.mobileadsinitprovider" android:initOrder="100"/>
+        <activity android:theme="@id/0x7F150295" android:name="com.google.android.libraries.hats20.SurveyPromptActivity" android:exported="false" android:excludeFromRecents="true" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F15069C" android:name="com.google.android.libraries.hats20.ShowSurveyActivity" android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.libraries.internal.growth.growthkit.inject.GrowthKitBootCompletedBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.internal.growth.growthkit.internal.debug.TestingToolsBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PROMO"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PREVIEW_PROMO"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.LOG_DEBUG_DATA"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.SYNC"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.CLEAR_COUNTERS"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_PROMOTIONS"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_EVAL_RESULTS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitBelowLollipopJobService" android:exported="false"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.libraries.onegoogle.accountmenu.accountlayer.AddAccountActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.performance.primes.transmitter.LifeboatReceiver" android:exported="false" android:process=":primes_lifeboat"/>
+        <receiver android:name="com.google.android.libraries.phenotype.client.stable.AccountRemovedBroadcastReceiver" android:exported="true" android:process="">
+            <intent-filter>
+                <action android:name="android.accounts.action.ACCOUNT_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.phenotype.client.stable.PhenotypeUpdateBackgroundBroadcastReceiver" android:permission="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST" android:exported="true" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F150551" android:label="@id/0x7F14046A" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:exported="true"/>
+        <activity android:theme="@id/0x7F150551" android:label="@id/0x7F14046A" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.social.peoplekit.thirdparty.viewcontrollers.ThirdPartyReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.google.android.apps.magazines.lifecycle-process"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.google.android.apps.magazines.androidx-startup">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F05001A" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F05001C" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F05001B" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F05001A" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.build.data.PropertiesServiceHolder" android:enabled="false" android:exported="false" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.build.data.Properties"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.build.data.properties" android:resource="@id/0x7F130004"/>
+        </service>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F18001A"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+    </application>
+</manifest>

@@ -1,0 +1,489 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="12583638" android:versionName="14.81" android:installLocation="0" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.nextbillion.groww" platformBuildVersionCode="28" platformBuildVersionName="9">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <queries>
+        <intent>
+            <action android:name="com.google.android.youtube.api.service.START"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.noshufou.android.su"/>
+        <package android:name="com.noshufou.android.su.elite"/>
+        <package android:name="com.thirdparty.superuser"/>
+        <package android:name="eu.chainfire.supersu"/>
+        <package android:name="com.koushikdutta.superuser"/>
+        <package android:name="com.zachspong.temprootremovejb"/>
+        <package android:name="com.ramdroid.appquarantine"/>
+        <package android:name="com.yellowes.su"/>
+        <package android:name="com.topjohnwu.magisk"/>
+        <package android:name="com.kingroot.kinguser"/>
+        <package android:name="com.kingo.root"/>
+        <package android:name="com.smedialink.oneclickroot"/>
+        <package android:name="com.zhiqupk.root.global"/>
+        <package android:name="com.alephzain.framaroot"/>
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="com.sbi.lotusintouch"/>
+        <package android:name="net.one97.paytm"/>
+        <package android:name="in.org.npci.upiapp"/>
+        <package android:name="com.csam.icici.bank.imobile"/>
+        <package android:name="com.snapwork.hdfc"/>
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <queries>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="com.sbi.lotusintouch"/>
+        <package android:name="net.one97.paytm"/>
+        <package android:name="in.org.npci.upiapp"/>
+        <package android:name="com.csam.icici.bank.imobile"/>
+        <package android:name="com.snapwork.hdfc"/>
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <package android:name="com.whatsapp"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <queries>
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <package android:name="com.upi.axispay"/>
+        <package android:name="com.axis.mobile"/>
+        <package android:name="com.fisglobal.bandhanupi.app"/>
+        <package android:name="com.bankofbaroda.upi"/>
+        <package android:name="in.org.npci.upiapp"/>
+        <package android:name="com.canarabank.mobility"/>
+        <package android:name="com.citiuat"/>
+        <package android:name="com.dbs.in.digitalbank"/>
+        <package android:name="com.olive.dcb.upi"/>
+        <package android:name="com.finopaytech.bpayfino"/>
+        <package android:name="com.freecharge.android"/>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="com.snapwork.hdfc"/>
+        <package android:name="com.mgs.hsbcupi"/>
+        <package android:name="com.csam.icici.bank.imobile"/>
+        <package android:name="com.icicibank.pockets"/>
+        <package android:name="com.euronet.iobupi"/>
+        <package android:name="com.mgs.induspsp"/>
+        <package android:name="com.fss.jnkpsp"/>
+        <package android:name="com.jio.myjio"/>
+        <package android:name="com.mycompany.kvb"/>
+        <package android:name="com.kvb.mobilebanking"/>
+        <package android:name="com.lcode.smartz"/>
+        <package android:name="com.msf.kbank.mobile"/>
+        <package android:name="com.upi.federalbank.org.lotza"/>
+        <package android:name="com.infrasofttech.mahaupi"/>
+        <package android:name="com.mipay.in.wallet"/>
+        <package android:name="com.myairtelapp"/>
+        <package android:name="com.mobikwik_new"/>
+        <package android:name="com.onymy.paybee.prod"/>
+        <package android:name="net.one97.paytm"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="com.Version1"/>
+        <package android:name="com.samsung.android.spay"/>
+        <package android:name="com.sbi.upi"/>
+        <package android:name="com.SIBMobile"/>
+        <package android:name="com.truecaller"/>
+        <package android:name="com.infrasoft.uboi"/>
+        <package android:name="com.lcode.ucoupi"/>
+        <package android:name="com.YesBank"/>
+        <package android:name="com.dreamplug.androidapp"/>
+        <package android:name="money.bullet"/>
+    </queries>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <application android:theme="@id/0x7F130168" android:label="@id/0x7F120002" android:icon="@id/0x7F0F0000" android:name="com.nextbillion.groww.MainApplication" android:allowBackup="false" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true" android:fullBackupContent="@id/0x7F150001" android:usesCleartextTraffic="false" android:networkSecurityConfig="@id/0x7F150008" android:appComponentFactory="androidx.core.app.AppComponentFactory">
+        <activity android:name="com.nextbillion.groww.genesys.common.activities.YoutubePlayerActivity" android:screenOrientation="0" android:configChanges="1152"/>
+        <meta-data android:name="asset_statements" android:resource="@id/0x7F1200DF"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@id/0x7F0F0000"/>
+        <meta-data android:name="preloaded_fonts" android:resource="@id/0x7F03000D"/>
+        <service android:name="com.nextbillion.groww.NativeFCMMessageService" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:label="@id/0x7F120002" android:name="com.nextbillion.groww.MainActivity" android:launchMode="1" android:configChanges="1712" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.stocks.activities.StocksActivity" android:launchMode="1" android:screenOrientation="1" android:configChanges="1440" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.explore.activities.FlashbackActivity" android:launchMode="1" android:screenOrientation="1" android:configChanges="1440" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.launch.SplashActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:name="com.nextbillion.groww.genesys.common.activities.WebActivity"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.mutualfunds.activities.MutualFundsActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.mutualfunds.activities.AllMutualFundsActivity" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.stocks.activities.AllStocksActivity" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F13015B" android:name="com.nextbillion.groww.genesys.stocks.activities.AllStocksDataListActivity" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.mutualfunds.activities.NFOActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.watchlist.WatchlistActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F130243" android:name="com.nextbillion.groww.genesys.loginsignup.activities.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="16">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="growwapp" android:host="open"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="groww.app.link"/>
+                <data android:scheme="https" android:host="groww-alternate.app.link"/>
+                <data android:scheme="https" android:host="growwnext.onelink.me"/>
+                <data android:scheme="https" android:host="growwuat.onelink.me"/>
+                <data android:scheme="https" android:host="groww.onelink.me"/>
+                <data android:scheme="https" android:host="app.groww.in"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="groww.in"/>
+                <data android:scheme="https" android:host="uat.groww.in"/>
+                <data android:scheme="https" android:host="next.groww.in"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/onboarding"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/explore"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/portfolios"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/cdslauth"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/onboarding"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/elss"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/contactus"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/viewsip"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/dashboard"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/track"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/smartsave"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/smart-save"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/generate-otm"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/generate_new_otm"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/groww-mandate"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/upload-groww-mandate"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/upload-otm"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/edit_otm_signature"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/verify_emandate"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/invite"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/order"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/reports"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/bank"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/assistant"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/help"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/user"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/profile"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/neft"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/family-account"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/xperts"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/addbiller"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/stocks"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/etfs"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/indices"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/nfo"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/user/bank-autopay"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/ipo"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/pricing"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/news"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/user/notifications/manage"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/user/help"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/axis"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/kotak"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/reliance"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/hdfc"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/sbi"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/icici"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/aditya"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/birla"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/uti"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/franklin"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/idfc"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/dsp"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/tata"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/lt"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/dhfl"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/sundaram"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/invesco"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/lic"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/jm"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/baroda"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/canara"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/hsbc"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/idbi"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/indiabulls"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/motilal"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/bnp"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/mirae"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/principal"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/boi"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/union"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/taurus"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/edelweiss"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/essel"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/mahindra"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/quantum"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/ppfas"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/iifl"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/escorts"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/shriram"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/iti"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/pgim"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/quant"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/quantum"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/sahara"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/yes"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/collection"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/collections"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/mutual-funds/filter"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/charts"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/flashback"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/market-news"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/options"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/futures"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/sovereign-gold-bonds"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/credit"/>
+                <data android:scheme="https" android:host="groww.in" android:pathPrefix="/deposits"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F130243" android:name="com.nextbillion.groww.genesys.loginsignup.activities.TwoFactorActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.search.activities.SearchActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:name="com.nextbillion.groww.genesys.gold.activities.GoldActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.you.activities.YouActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.dashboard.activities.DashboardActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.home.activities.HomeActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.onboarding.activities.OnBoardingActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.explore.activities.MainNativeActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:name="com.nextbillion.groww.genesys.ipo.activities.IpoActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.onboarding.activities.UpiOnboardingActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.you.activities.UpiOptionsActivity" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.payment.PaymentActivity" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_hoCMO1fZl0rJ9zofgH9iTdeksxhJzwOq"/>
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_giwMS6o4k6zUWwleeV2OogffsreSqEJG"/>
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false"/>
+        <meta-data android:name="com.bugsnag.android.API_KEY" android:value="965e0d9eb7c6474fd06256f3fc3c2b9d"/>
+        <meta-data android:name="com.webengage.sdk.android.environment" android:value="in"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.nextbillion.groww.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150003"/>
+        </provider>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.mutualfunds.activities.MFSwitchActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.stocks.activities.NewsActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.stocks.activities.FinancialsActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.fno.activities.FnoActivity" android:launchMode="1" android:screenOrientation="1" android:configChanges="1440" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.fno.activities.FnoExploreActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.sgb.activities.SgbActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130010" android:name="com.nextbillion.groww.genesys.common.activities.GenericActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.nextbillion.groww.androidx-startup">
+            <meta-data android:name="com.nextbillion.groww.AppStartupInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="com.payu.crashlogger.CrashProviderInitializer" android:value="androidx.startup"/>
+        </provider>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:theme="@id/0x7F130002" android:label="@id/0x7F1200C8" android:name="org.npci.upi.security.pinactivitycomponent.GetCredential" android:exported="false" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.pinactivitycomponent.GetCredential"/>
+            </intent-filter>
+        </activity>
+        <service android:name="org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.services.CLRemoteService"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.nextbillion.groww.commons.logger.LogNotificationReceiver"/>
+        <activity android:name="com.payu.custombrowser.CBActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <service android:name="com.payu.custombrowser.services.SnoozeService"/>
+        <activity android:theme="@id/0x7F1302DE" android:name="com.payu.upisdk.upiintent.PaymentResponseUpiSdkActivity" android:windowSoftInputMode="3"/>
+        <activity android:name="com.rnrazorpay.RazorPayWebViewActivity"/>
+        <meta-data android:name="com.razorpay.plugin.googlepay" android:value="com.razorpay.RzpGooglePay"/>
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="true"/>
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false"/>
+        <provider android:name="io.invertase.firebase.crashlytics.ReactNativeFirebaseCrashlyticsInitProvider" android:exported="false" android:authorities="com.nextbillion.groww.reactnativefirebasecrashlyticsinitprovider" android:initOrder="98"/>
+        <service android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingHeadlessService"/>
+        <receiver android:name="io.invertase.firebase.messaging.ReactNativeFirebaseMessagingReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="true"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value=""/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@id/0x7F0602AF"/>
+        <activity android:theme="@id/0x7F1302DB" android:name="com.yalantis.ucrop.UCropActivity"/>
+        <provider android:name="com.imagepicker.FileProvider" android:exported="false" android:authorities="com.nextbillion.groww.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150009"/>
+        </provider>
+        <provider android:name="cl.json.RNShareFileProvider" android:exported="false" android:authorities="com.nextbillion.groww.rnshare.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F15000C"/>
+        </provider>
+        <provider android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider" android:exported="false" android:authorities="com.nextbillion.groww.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150002"/>
+        </provider>
+        <provider android:name="com.RNFetchBlob.Utils.FileProvider" android:exported="false" android:authorities="com.nextbillion.groww.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150009"/>
+        </provider>
+        <activity android:theme="@id/0x7F1302DC" android:name="co.hyperverge.hypersnapsdk.activities.HVDocsActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:theme="@id/0x7F1302DC" android:name="co.hyperverge.hypersnapsdk.activities.HVFaceActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:theme="@id/0x7F1302DC" android:name="co.hyperverge.hypersnapsdk.activities.ReviewScreenActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <service android:name="co.hyperverge.hypersnapsdk.helpers.S3FetchHelper" android:enabled="true"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.ConversationDetailActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.DeeplinkInterstitialActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.PictureAttachmentActivity" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.CategoryListActivity"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.ArticleListActivity" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1302EA" android:name="com.freshchat.consumer.sdk.activity.ArticleDetailActivity"/>
+        <activity android:theme="@id/0x7F1302C7" android:name="com.freshchat.consumer.sdk.activity.InterstitialActivity" android:configChanges="1152"/>
+        <service android:name="com.freshchat.consumer.sdk.service.FreshchatService"/>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.freshchat.consumer.sdk.provider.FreshchatInitProvider" android:enabled="true" android:exported="false" android:multiprocess="true" android:authorities="com.nextbillion.groww.freshchat.initprovider"/>
+        <service android:name="com.webengage.sdk.android.ExecutorService"/>
+        <service android:name="com.webengage.sdk.android.EventLogService"/>
+        <service android:name="com.webengage.sdk.android.NotificationClickHandlerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.webengage.sdk.android.intent.ACTION"/>
+                <category android:name="com.nextbillion.groww"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x0103000F" android:name="com.webengage.sdk.android.actions.render.WebEngageActivity" android:configChanges="1152"/>
+        <receiver android:name="com.webengage.sdk.android.WebEngageReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.webengage.sdk.android.intent.ACTION"/>
+                <category android:name="com.nextbillion.groww"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.webengage.sdk.android.WebEngageJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:theme="@id/0x7F130322" android:name="com.webengage.sdk.android.WETransparentActivity" android:enabled="true" android:excludeFromRecents="true"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <provider android:name="com.google.firebase.perf.provider.FirebasePerfProvider" android:exported="false" android:authorities="com.nextbillion.groww.firebaseperfprovider" android:initOrder="101"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ndk.CrashlyticsNdkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@id/0x7F1302DC" android:name="co.hyperverge.hvinstructionmodule.activities.FaceInstructionActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:theme="@id/0x7F1302DC" android:name="co.hyperverge.hvinstructionmodule.activities.DocInstructionActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:theme="@id/0x7F1302DC" android:name="co.hyperverge.hvqrmodule.activities.QRScannerActivity" android:screenOrientation="1"/>
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="barcode"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="genericidp" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x01030010" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="recaptcha" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.nextbillion.groww.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B0017"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <uses-library android:name="android.test.runner" android:required="false"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F13031F" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:enabled="false" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true"/>
+    </application>
+</manifest>

@@ -1,0 +1,407 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="202216513" android:versionName="6.2203.1651" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.azure.authenticator" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" android:maxSdkVersion="25"/>
+    <permission android:label="Support permission" android:name="com.azure.authenticator.knox.SUPPORT_PERMISSION" android:protectionLevel="2"/>
+    <uses-permission android:name="com.azure.authenticator.knox.SUPPORT_PERMISSION"/>
+    <queries>
+        <package android:name="com.microsoft.windowsintune.companyportal"/>
+        <package android:name="com.azure.authenticator"/>
+        <package android:name="com.microsoft.identity.testuserapp"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_ENTERPRISE_DEVICE_ADMIN"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_CERTIFICATE"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_SECURITY"/>
+    <uses-permission android:name="com.samsung.android.knox.permission.KNOX_CERT_PROVISIONING"/>
+    <uses-permission android:name="android.permission.sec.ENTERPRISE_DEVICE_ADMIN"/>
+    <uses-permission android:name="android.permission.sec.MDM_SECURITY"/>
+    <uses-permission android:name="android.permission.sec.MDM_CERTIFICATE"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <application android:theme="@id/0x7F1303AF" android:label="@id/0x7F120278" android:icon="@id/0x7F0E0000" android:name="com.azure.authenticator.PhoneFactorApplication" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="@id/0x7F150002" android:resizeableActivity="true" android:networkSecurityConfig="@id/0x7F15000B" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyBzroufTAk51y1sHRyElkuHVhd6sm-ptNg"/>
+        <activity android:theme="@id/0x7F1303AF" android:name="com.azure.authenticator.ui.LaunchActivity" android:screenOrientation="1" android:windowSoftInputMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter android:label="@id/0x7F120278">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="microsoft-authenticator" android:host="activateMfa"/>
+                <data android:scheme="otpauth" android:host="totp"/>
+                <data android:scheme="samsung-otpauth" android:host="totp"/>
+                <data android:scheme="ms-msa"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/csv"/>
+                <data android:mimeType="text/comma-separated-values"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1303AF" android:label="@id/0x7F120278" android:name="com.azure.authenticator.ui.MainActivity" android:exported="true" android:launchMode="1" android:screenOrientation="1" android:configChanges="1408" android:windowSoftInputMode="16">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="openid"/>
+                <data android:host="vc"/>
+                <data android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1303AF" android:name="com.azure.authenticator.ui.fragment.sharedDeviceMode.SharedDeviceModeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.azure.authenticator.ui.authentication.MsaSessionActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.azure.authenticator.ui.msa.MsaProtectionActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.azure.authenticator.ui.authentication.AadRemoteNgcSessionActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.azure.authenticator.ui.backup.BackupFlowActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.azure.authenticator.ui.backup.RestoreFlowActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F1303AF" android:name="com.azure.authenticator.authentication.msa.ui.AddMsaAccountActivity" android:exported="false" android:excludeFromRecents="true" android:screenOrientation="1" android:configChanges="1408"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.azure.authenticator.authentication.msa.ui.SignOutMsaAccountActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F1303AC" android:name="com.microsoft.authenticator.mfasdk.authentication.ui.MfaAuthDialogActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:name="com.azure.authenticator.utils.TestActivity" android:exported="false" android:excludeFromRecents="true" android:screenOrientation="1"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false" android:foregroundServiceType="8"/>
+        <receiver android:name="com.azure.authenticator.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.azure.authenticator.notifications.msa.MsaNotificationActionBroadcastReceiver"/>
+        <receiver android:name="com.azure.authenticator.logging.LoggingReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.microsoft.SEND_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.azure.authenticator.OnAppUpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+            <meta-data android:name="showUpgradeInfo" android:value="false"/>
+        </receiver>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.azure.authenticator.androidx-startup">
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="com.microsoft.authenticator.notifications.controller.FcmListenerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0A0015"/>
+        <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true"/>
+        <meta-data android:name="com.samsung.android.sdk.multiwindow.enable" android:value="true"/>
+        <meta-data android:name="android.content.APP_RESTRICTIONS" android:resource="@id/0x7F150001"/>
+        <receiver android:name="com.samsung.android.knox.IntentConverterReceiver" android:permission="com.azure.authenticator.knox.SUPPORT_PERMISSION">
+            <intent-filter>
+                <action android:name="edm.intent.action.license.status"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.brooklyn.module.autofill.authentication.CredentialsAutofillAuthActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.brooklyn.module.autofill.authentication.PaymentsAutofillAuthActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.brooklyn.module.accessibility.AccessibilityAuthActivity" android:exported="false" android:taskAffinity="" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.brooklyn.module.autofill.dialogs.AddressSaveNudgeActivity" android:exported="false" android:taskAffinity="" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.brooklyn.module.generatepasswords.viewlogic.GeneratePasswordAutofillActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="1408"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.brooklyn.module.generatepasswords.viewlogic.ChangePasswordAutofillActivity" android:exported="false" android:excludeFromRecents="true" android:configChanges="1408"/>
+        <service android:label="@id/0x7F120278" android:name="com.microsoft.brooklyn.module.autofill.BrooklynAutofillService" android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.autofill.AutofillService"/>
+            </intent-filter>
+            <meta-data android:name="android.autofill" android:resource="@id/0x7F150003"/>
+        </service>
+        <service android:label="@id/0x7F120278" android:name="com.microsoft.brooklyn.module.accessibility.BrooklynAccessibilityService" android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService"/>
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@id/0x7F150000"/>
+        </service>
+        <receiver android:name="com.microsoft.authenticator.mfasdk.authentication.businessLogic.MfaNotificationActionBroadcastReceiver"/>
+        <provider android:name="com.microsoft.authenticator.mfasdk.provider.SharedDataContentProvider" android:enabled="true" android:exported="true" android:authorities="com.azure.authenticator.mfasdk.shareddatacontentprovider"/>
+        <activity android:theme="@id/0x7F130430" android:name="com.microsoft.authenticator.commonuilibrary.ui.localauth.DeviceScreenUnlockActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:name="com.microsoft.authenticator.commonuilibrary.ui.AppLockActivity" android:exported="false" android:excludeFromRecents="true" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F13043E" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:clearTaskOnLaunch="true" android:stateNotNeeded="true" android:screenOrientation="6" android:windowSoftInputMode="3"/>
+        <activity android:name="com.microsoft.aad.adal.AuthenticationActivity" android:configChanges="3488"/>
+        <activity android:name="com.microsoft.identity.client.AccountChooserActivity" android:exported="true" android:process=":auth" android:configChanges="1440"/>
+        <activity android:name="com.microsoft.identity.common.internal.providers.oauth2.BrokerAuthorizationActivity" android:process=":auth" android:excludeFromRecents="true" android:configChanges="3488"/>
+        <activity android:theme="@id/0x7F1302AF" android:label="@id/0x7F1206AD" android:name="com.microsoft.workaccount.workplacejoin.core.JoinActivity" android:exported="true" android:process=":auth" android:excludeFromRecents="true" android:configChanges="1184" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1302AF" android:name="com.microsoft.workaccount.workplacejoin.core.LeaveActivity" android:exported="true" android:process=":auth" android:excludeFromRecents="true" android:configChanges="1184" android:noHistory="true"/>
+        <activity android:theme="@id/0x7F1302AF" android:name="com.microsoft.workaccount.workplacejoin.core.InstallCertActivity" android:exported="true" android:process=":auth" android:excludeFromRecents="true" android:configChanges="1184" android:windowSoftInputMode="20"/>
+        <activity android:theme="@id/0x7F1302AF" android:name="com.microsoft.workaccount.workplacejoin.core.InstallCertDeepLinkActivity" android:process=":auth" android:excludeFromRecents="true" android:screenOrientation="13" android:configChanges="1184" android:windowSoftInputMode="18">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="workplacejoin" android:host="deviceregistration" android:path="/install-cert"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.microsoft.workaccount.workplacejoin.core.WPJAdminReceiver" android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLED"/>
+                <action android:name="android.app.action.DEVICE_ADMIN_DISABLE_REQUESTED"/>
+            </intent-filter>
+            <meta-data android:name="android.app.device_admin" android:resource="@id/0x7F150008"/>
+        </receiver>
+        <receiver android:name="com.microsoft.workaccount.workplacejoin.core.OnUpgradeReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.microsoft.workaccount.authenticatorservice.KeyMigrationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.microsoft.workaccount.KEY_MIGRATION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.microsoft.workaccount.authenticatorservice.AuthenticatorService" android:exported="true" android:process=":auth">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@id/0x7F150016"/>
+            <meta-data android:name="android.accounts.AccountAuthenticator.customTokens" android:value="1"/>
+        </service>
+        <service android:name="com.microsoft.aad.adal.BrokerAccountService" android:exported="true" android:process=":auth">
+            <intent-filter>
+                <action android:name="com.microsoft.workaccount.BrokerAccount"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.microsoft.identity.client.MicrosoftAuthService" android:exported="true" android:process=":auth">
+            <intent-filter>
+                <action android:name="com.microsoft.identity.client.MicrosoftAuth"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.microsoft.workaccount.workplacejoin.WPJService" android:exported="true">
+            <intent-filter>
+                <action android:name="com.microsoft.workaccount.workplacejoin.WPJService"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.microsoft.identity.client.BrokerContentProvider" android:enabled="true" android:exported="true" android:process=":auth" android:authorities="com.azure.authenticator.microsoft.identity.broker"/>
+        <activity android:name="com.microsoft.identity.client.BrokerBrowserRedirectActivity" android:process=":auth" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="msauth" android:host="microsoft.aad.brokerplugin"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="msauth" android:host="wpj"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.microsoft.workaccount.authenticatorservice.ReencryptionService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false" android:process=":auth"/>
+        <activity android:name="com.microsoft.identity.common.internal.providers.oauth2.AuthorizationActivity" android:exported="false" android:launchMode="2" android:configChanges="3488"/>
+        <activity android:name="com.microsoft.identity.common.internal.providers.oauth2.CurrentTaskAuthorizationActivity" android:exported="false" android:launchMode="0" android:configChanges="3488"/>
+        <activity android:name="com.microsoft.identity.common.internal.broker.BrokerActivity"/>
+        <activity android:name="com.microsoft.identity.client.helper.BrokerHelperActivity" android:exported="false" android:launchMode="0" android:configChanges="3488"/>
+        <activity android:name="com.microsoft.identity.client.BrowserTabActivity" android:exported="true"/>
+        <activity android:name="com.microsoft.identity.client.CurrentTaskBrowserTabActivity" android:exported="true"/>
+        <activity android:theme="@id/0x7F130279" android:name="com.microsoft.powerlift.android.RemedyActivity" android:exported="false"/>
+        <activity android:theme="@id/0x7F130279" android:name="com.microsoft.powerlift.android.PowerLiftSupportInsightsActivity" android:exported="false"/>
+        <receiver android:name="com.microsoft.powerlift.android.internal.sync.SyncJobBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.evernote.android.job.ADD_JOB_CREATOR"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F13021B" android:name="net.openid.appauth.AuthorizationManagementActivity" android:exported="false" android:launchMode="2" android:configChanges="3504"/>
+        <activity android:name="net.openid.appauth.RedirectUriReceiverActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="vcclient"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050005" android:exported="true" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="com.azure.authenticator.com.squareup.picasso"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.azure.authenticator.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <provider android:name="com.imagepicker.FileProvider" android:exported="false" android:authorities="com.azure.authenticator.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F15000C"/>
+        </provider>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.evernote.android.job.v21.PlatformJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.evernote.android.job.v14.PlatformAlarmService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact" android:exported="false"/>
+        <receiver android:name="com.evernote.android.job.v14.PlatformAlarmReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.evernote.android.job.v14.RUN_JOB"/>
+                <action android:name="net.vrallev.android.job.v14.RUN_JOB"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.evernote.android.job.JobBootReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.evernote.android.job.gcm.PlatformGcmService" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.evernote.android.job.JobRescheduleService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <activity android:theme="@id/0x7F130243" android:label="@id/0x7F1206D2" android:icon="@id/0x7F08029C" android:name="com.microsoft.onlineid.authenticator.AccountAddPendingActivity" android:exported="false"/>
+        <activity android:theme="@id/0x7F130246" android:name="com.microsoft.onlineid.internal.ui.WebFlowActivity" android:exported="false" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130243" android:label="@id/0x7F1206D2" android:icon="@id/0x7F08029C" android:name="com.microsoft.onlineid.ui.AddAccountActivity" android:exported="false" android:configChanges="1152" android:windowSoftInputMode="16">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.ADD_ACCOUNT"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_UP_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F130247" android:name="com.microsoft.onlineid.ui.SignOutActivity" android:exported="false" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F130244" android:label="@id/0x7F1206D2" android:icon="@id/0x7F08029C" android:name="com.microsoft.onlineid.internal.ui.AccountPickerActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.PICK_ACCOUNT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F130243" android:label="@id/0x7F1206D2" android:icon="@id/0x7F08029C" android:name="com.microsoft.onlineid.internal.ui.InterruptResolutionActivity" android:exported="false" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <service android:name="com.microsoft.onlineid.internal.sso.client.BackupService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.sso.client.PUSH_BACKUP"/>
+                <action android:name="com.microsoft.onlineid.internal.sso.client.PUSH_BACKUP_IF_NEEDED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.microsoft.onlineid.internal.MsaService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="com.microsoft.onlineid.internal.GET_TICKET"/>
+                <action android:name="com.microsoft.onlineid.internal.GET_USER_KEY"/>
+                <action android:name="com.microsoft.onlineid.internal.UPDATE_PROFILE"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_OUT"/>
+                <action android:name="com.microsoft.onlineid.internal.SIGN_OUT_ALL_APPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.microsoft.onlineid.internal.sso.service.MsaSsoService" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.microsoft.msa.action.SSO_SERVICE"/>
+            </intent-filter>
+            <meta-data android:name="com.microsoft.msa.service.sso_version" android:value="14"/>
+            <meta-data android:name="com.microsoft.msa.service.sdk_version" android:value="@id/0x7F1205F2"/>
+        </service>
+        <service android:name="com.microsoft.tokenshare.TokenSharingService" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="com.microsoft.tokenshare.TokenSharingService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="token_share_sdk_version" android:value="2"/>
+        <meta-data android:name="token_share_build_version" android:value="1.6.3"/>
+        <meta-data android:name="token_share_parcelable_version" android:value="3"/>
+    </application>
+</manifest>

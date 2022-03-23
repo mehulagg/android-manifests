@@ -1,0 +1,418 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2524467" android:versionName="149.1.1 (arm64-v8a_release_flutter)" android:importantForAccessibility="1" android:compileSdkVersion="32" android:compileSdkVersionCodename="Tiramisu" package="com.google.android.apps.nbu.paisa.user" platformBuildVersionCode="32" platformBuildVersionName="Tiramisu">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.NFC"/>
+    <uses-feature android:name="android.hardware.nfc.hce" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.facebook.orca"/>
+        <package android:name="com.whatsapp"/>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <data android:scheme="upi" android:host="pay"/>
+        </intent>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.facebook.orca"/>
+        <package android:name="com.whatsapp"/>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+            <data android:mimeType="text/plain"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <data android:scheme="upi" android:host="pay"/>
+        </intent>
+        <package android:name="com.google.android.apps.walletnfcrel"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http" android:host="www.example.com"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <package android:name="com.felicanetworks.mfc"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http" android:host="www.example.com"/>
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+    </queries>
+    <meta-data android:name="firebase_performance_collection_deactivated" android:value="true"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <application android:label="@id/0x7F130099" android:icon="@id/0x7F100000" android:name="com.google.nbu.paisa.flutter.gpay.channels.release.GpayReleaseApplication" android:taskAffinity="" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="false" android:usesCleartextTraffic="false" android:networkSecurityConfig="@id/0x7F16000B" android:hasFragileUserData="false">
+        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyD6stKfQY_YOZ7FrHMSB7sqxs237LxQnpI"/>
+        <meta-data android:name="asset_statements" android:resource="@id/0x7F130023"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <activity android:theme="@id/0x7F140187" android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.MainActivity" android:exported="false" android:launchMode="1" android:screenOrientation="1" android:configChanges="1073756084" android:windowSoftInputMode="16" android:hardwareAccelerated="true">
+            <meta-data android:name="io.flutter.embedding.android.NormalTheme" android:resource="@id/0x7F1401A5"/>
+        </activity>
+        <activity android:theme="@id/0x7F140187" android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.LauncherActivity" android:exported="true" android:launchMode="1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x01030055" android:name="com.google.nbu.paisa.flutter.gpay.app.NotificationActivity" android:exported="false" android:launchMode="1"/>
+        <activity android:theme="@id/0x7F140187" android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity" android:exported="true"/>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.ImaliIntentFilter" android:enabled="true" android:exported="false" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <meta-data android:name="com.google.nbu.paisa.flutter.gpay.app.require_explicit_intent" android:value="true"/>
+        </activity-alias>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.LoadPaymentDataIntentFilter" android:enabled="true" android:exported="true" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <intent-filter>
+                <action android:name="com.google.android.apps.nbu.paisa.user.LOAD_PAYMENT_DATA"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.WebPaymentIntentFilter" android:enabled="true" android:exported="true" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <intent-filter>
+                <action android:name="org.chromium.intent.action.PAY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="org.chromium.default_payment_method_name" android:value="@id/0x7F130105"/>
+        </activity-alias>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.DeepLinkIntentFilter" android:enabled="true" android:exported="true" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="gpay.app.goo.gl"/>
+                <data android:scheme="https" android:host="gpay.app.goo.gl"/>
+                <data android:scheme="https" android:host="microapps.google.com"/>
+                <data android:scheme="https" android:host="tez.app.goo.gl"/>
+                <data android:scheme="https" android:host="tez.google.com"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="www.bharatbillpay.com" android:path="/pay"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="pay.google.com" android:pathPrefix="/app"/>
+                <data android:scheme="https" android:host="pay.google.com" android:pathPrefix="/app"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="tez" android:host="upi"/>
+                <data android:scheme="gpay" android:host="upi"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="gpay" android:host="app_action"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.UpiIntentFilter" android:enabled="false" android:exported="true" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="upi" android:host="pay"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.android.apps.nbu.paisa.user.inapp.upi.UpiInAppPaymentActivity" android:enabled="false" android:exported="true" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="upi" android:host="pay"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:label="@id/0x7F130098" android:name="com.google.nbu.paisa.flutter.gpay.app.ShareIntentFilter" android:enabled="false" android:exported="true" android:targetActivity="com.google.nbu.paisa.flutter.gpay.app.InterceptorActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+        </activity-alias>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.notifications" android:resource="@id/0x7F160005"/>
+        <service android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService" android:enabled="false" android:exported="false" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.notifications" android:resource="@id/0x7F120006"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.clearcut_client" android:resource="@id/0x7F120001"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.consentverifier" android:resource="@id/0x7F120002"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.notifications.platform" android:resource="@id/0x7F120005"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:nbu.paisa.gpay.app.consumer.application" android:resource="@id/0x7F120022"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:nbu.paisa.gpay.app.consumer.oobe" android:resource="@id/0x7F12002B"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:gpay.consumer.oobesync" android:resource="@id/0x7F120012"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.internal.growth.growthkit" android:resource="@id/0x7F120003"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.mdi.sync" android:resource="@id/0x7F120004"/>
+            <meta-data android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.performance.primes" android:resource="@id/0x7F120007"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.performance.primes" android:resource="@id/0x7F120008"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.surveys" android:resource="@id/0x7F120009"/>
+        </service>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.clearcut_client" android:resource="@id/0x7F160001"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.consentverifier" android:resource="@id/0x7F160002"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.notifications.platform" android:resource="@id/0x7F160006"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:nbu.paisa.gpay.app.consumer.application" android:resource="@id/0x7F16001C"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:nbu.paisa.gpay.app.consumer.oobe" android:resource="@id/0x7F160025"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:gpay.consumer.oobesync" android:resource="@id/0x7F160012"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.internal.growth.growthkit" android:resource="@id/0x7F160003"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.mdi.sync" android:resource="@id/0x7F160004"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.performance.primes" android:resource="@id/0x7F160007"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.surveys" android:resource="@id/0x7F160008"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F140464" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <activity android:name="com.google.android.gms.gmscompliance.ui.UncertifiedDeviceActivity" android:exported="false"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B0024"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:io.flutter.plugins.firebasedynamiclinks.FlutterFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.internal.growth.growthkit.inject.GrowthKitBootCompletedBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.internal.growth.growthkit.internal.debug.TestingToolsBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PROMO"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PREVIEW_PROMO"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.LOG_DEBUG_DATA"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.SYNC"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.CLEAR_COUNTERS"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_PROMOTIONS"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_EVAL_RESULTS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitBelowLollipopJobService" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.accountchanged.AccountChangedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.blockstatechanged.BlockStateChangedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.app.action.APP_BLOCK_STATE_CHANGED"/>
+                <action android:name="android.app.action.NOTIFICATION_CHANNEL_BLOCK_STATE_CHANGED"/>
+                <action android:name="android.app.action.NOTIFICATION_CHANNEL_GROUP_BLOCK_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.gcm.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter android:priority="99">
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.localechanged.LocaleChangedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.restart.RestartReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.libraries.notifications.entrypoints.scheduled.ScheduledTaskService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.systemtray.SystemTrayBroadcastReceiver" android:exported="false"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.libraries.notifications.entrypoints.systemtray.SystemTrayActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.notifications.entrypoints.timezonechanged.TimezoneChangedReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.libraries.notifications.executor.impl.basic.ChimeExecutorApiService" android:exported="false"/>
+        <activity android:theme="@id/0x7F1403DB" android:label="@id/0x7F130112" android:name="com.google.android.libraries.performance.primes.debug.PrimesEventActivity" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.primes.action.DEBUG_PRIMES_EVENTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.google.android.libraries.performance.primes.transmitter.LifeboatReceiver" android:exported="false" android:process=":primes_lifeboat"/>
+        <receiver android:name="com.google.android.libraries.phenotype.client.stable.AccountRemovedBroadcastReceiver" android:exported="true" android:process="">
+            <intent-filter>
+                <action android:name="android.accounts.action.ACCOUNT_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.phenotype.client.stable.PhenotypeUpdateBackgroundBroadcastReceiver" android:permission="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST" android:exported="true" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F1401AA" android:label="@id/0x7F130109" android:name="com.google.android.libraries.places.widget.AutocompleteActivity" android:exported="false" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1402DC" android:name="com.google.android.libraries.surveys.internal.view.SurveyActivity" android:exported="true" android:process="@id/0x7F130127" android:excludeFromRecents="true" android:launchMode="1" android:configChanges="1440" android:windowSoftInputMode="16">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+        <meta-data android:name="io.flutter.embedding.android.EnableSkParagraph" android:value="true"/>
+        <meta-data android:name="io.flutter.embedding.engine.loader.FlutterLoader.flutter-assets-dir" android:value="app_android_release.assets"/>
+        <meta-data android:name="io.flutter.embedding.engine.loader.FlutterLoader.aot-shared-library-name" android:value="libandroid_release_android_library_flutter_artifacts.so"/>
+        <receiver android:name="com.google.nbu.paisa.flutter.plugins.androidpinshortcut.AndroidPinShortcutBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.nbu.paisa.flutter.plugins.androidpinshortcut.PIN_INTENT_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x01030010" android:name="com.google.nbu.paisa.flutter.plugins.imalipayment.ImaliActivityV2" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.payments.standard.REDIRECT_CAPTURE_V1"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.nbu.paisa.flutter.plugins.inappsdk.IsReadyToPayService" android:enabled="true" android:exported="true" android:description="@id/0x7F13011C">
+            <intent-filter>
+                <action android:name="com.google.android.apps.nbu.paisa.user.inapp.sdk.service.IS_READY_TO_PAY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.nbu.paisa.flutter.plugins.transactionlistener.TapBroadcastReceiver" android:permission="com.google.android.gms.permission.SEND_ANDROID_PAY_DATA" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.STORE_TAP"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.nbu.paisa.flutter.plugins.transactionlistener.InAppTransactionBroadcastReceiver" android:permission="com.google.android.gms.permission.SEND_ANDROID_PAY_DATA" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.IN_APP_TRANSACTION_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.nbu.paisa.flutter.plugins.upiovernfc.UpiOverNfcService" android:permission="android.permission.BIND_NFC_SERVICE" android:enabled="false" android:exported="true">
+            <intent-filter>
+                <action android:name="android.nfc.cardemulation.action.HOST_APDU_SERVICE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data android:name="android.nfc.cardemulation.host_apdu_service" android:resource="@id/0x7F160000"/>
+        </service>
+        <service android:name="com.google.nbu.paisa.flutter.plugins.webpayment.WebPaymentService" android:enabled="true" android:exported="true" android:description="@id/0x7F13015F">
+            <intent-filter>
+                <action android:name="org.chromium.intent.action.IS_READY_TO_PAY"/>
+            </intent-filter>
+        </service>
+        <provider android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider" android:exported="false" android:authorities="com.google.android.apps.nbu.paisa.user.flutter.image_provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F160009"/>
+        </provider>
+        <provider android:name="io.flutter.plugins.share.ShareFileProvider" android:exported="false" android:authorities="com.google.android.apps.nbu.paisa.user.flutter.share_provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F16000A"/>
+        </provider>
+        <activity android:theme="@id/0x01030007" android:name="io.flutter.plugins.urllauncher.WebViewActivity" android:exported="false"/>
+        <service android:name="androidx.camera.core.impl.MetadataHolderService" android:enabled="false" android:exported="false">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050005" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F140000" android:name="org.npci.upi.security.pinactivitycomponent.GetCredential" android:exported="false" android:excludeFromRecents="true" android:screenOrientation="1" android:windowSoftInputMode="2">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.pinactivitycomponent.GetCredential"/>
+            </intent-filter>
+        </activity>
+        <service android:name="org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.services.CLRemoteService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.build.data.PropertiesServiceHolder" android:enabled="false" android:exported="false" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.build.data.Properties"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.build.data.properties" android:resource="@id/0x7F120000"/>
+        </service>
+    </application>
+</manifest>

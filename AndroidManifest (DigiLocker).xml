@@ -1,0 +1,309 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="751" android:versionName="6.8.9" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="com.digilocker.android" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <uses-permission android:name="android.permission."/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="com.google.android.apps.photos.permission.GOOGLE_PHOTOS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <application android:theme="@id/0x7F130297" android:label="@id/0x7F12003A" android:icon="@id/0x7F0F0001" android:name="com.digilocker.android.MainApp" android:manageSpaceActivity="com.digilocker.android.ui.activity.ManageSpaceActivity" android:launchMode="3" android:allowBackup="false" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="false" android:usesCleartextTraffic="false" android:networkSecurityConfig="@id/0x7F150008" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:isSplitRequired="true" android:requestLegacyExternalStorage="true">
+        <activity android:name="in.gov.dlocker.ui.activity.PrivacyPolicyActivity" android:exported="false"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.AcademicDynamicQRActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.activities.drive.HlDocViewActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.activities.drive.HlockerDriveAllDocs" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.activities.drive.HlockerDriveDocType" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.activities.drive.HlockerDriveHip" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.fragments.HLValidationSentFragment" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.activities.HealthLockerActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.hlocker.activities.HlockerFilesActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.DynamicQrActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.NegdInternQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.PcdaQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.ReadPdfActivity"/>
+        <activity android:name="in.gov.dlocker.ui.uploads.MaintenancePageActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.uploads.DocViewActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1302A8" android:name="in.gov.dlocker.ui.uploads.UploadActivityNew" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.CBSEClassIxQRCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.IsroQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.NegdQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.ActivityViewPdf" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.MetaViewActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.gov.dlocker.ui.activity.ChatBotActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.gov.dlocker.ui.activity.ImagePickerActivity"/>
+        <activity android:name="in.gov.dlocker.ui.activity.RegisterHealthIDForMobileUserActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1302A0" android:name="com.yalantis.ucrop.UCropActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.CovidRegistrationActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.IndianNavyCertificateQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.IndianNavyMarksheetQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.GetYourHealthIDActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.gov.dlocker.metaview.NdrfMetaViewActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.NdrfQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.qrcodeview.NTAQrCodeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.RegisterHealthIDActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.CbseXMarksMetaView" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.CBSEXIIMetaView" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.gov.dlocker.ui.activity.PullAuthorizedDocumentActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.dashboard.activity.PreviewMPopDocsActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:label="@id/0x7F120435" android:name="com.digilocker.android.ui.activity.dashboard.activity.DashboardInnerContentActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1302A0" android:name="com.digilocker.android.ui.activity.dashboard.activity.MainDashboardActivity" android:exported="true" android:launchMode="0" android:screenOrientation="1" android:configChanges="1200" android:windowSoftInputMode="18">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.digilocker.android.ui.activity.webview.ActivityContactUs" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.webview.ActivityAboutUs" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.webview.ActivityFaq" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.webview.ActivityHelp" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.NotificationActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:label="@id/0x7F12003A" android:name="com.digilocker.android.ui.activity.FileDisplayActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.TransportDLDOC" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRPassingCertificate" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.utils.DynamicDocDesign" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRElectionCommision" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRPanRecordActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.MarksheetQRScreen" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRMigrationClass" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ICSEQRMigrationCertificate" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ActivityGauhatiQR" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRDrivingLicenceScreen" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.UKBoardMarksheetQrActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.UKMigrationQRActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.MizoramMarksheetQrActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.MizoramPassingQrActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.CtetQrActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ActivityKarnatkaPdsQr" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRRegistrationScreen" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRICSEMarksheets" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRCbseXIIScreen" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRCbseXScreen" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.PreScanActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.VerifyAadhaarOTPActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.ActivityAboutList" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.TransportRCDoc" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.IssuedAadhaarDoc" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ScanCode" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ICSEQRPassingCertificate" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ActivityUserProfile" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ProfileActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.webtemplate.ActivityProfileTemplate" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.IssuedDocDetailActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.LinkAadhaarActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="com.digilocker.android.ui.activity.Preferences" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <service android:name="com.digilocker.android.authentication.AccountAuthenticatorService" android:exported="false">
+            <intent-filter android:priority="100">
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@id/0x7F150002"/>
+        </service>
+        <service android:name="com.digilocker.android.services.GetIssuedDocumentCountService" android:exported="false"/>
+        <service android:name="com.digilocker.android.services.ConfirmAadhaarLinkingStatus" android:exported="false"/>
+        <service android:name="in.gov.dlocker.operations.AuthorizedDocumentOprtation" android:exported="false"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.digilocker.android.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150006"/>
+        </provider>
+        <provider android:label="@id/0x7F12042E" android:name="com.digilocker.android.providers.FileContentProvider" android:enabled="true" android:exported="false" android:authorities="@id/0x7F1200C9" android:syncable="true"/>
+        <provider android:name="com.digilocker.android.db.DBProvider" android:enabled="true" android:exported="false" android:authorities="com.negd.digilocker" android:syncable="true"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.digilocker.android.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150006"/>
+        </provider>
+        <activity android:name="com.digilocker.android.authentication.AuthenticatorActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18">
+            <intent-filter>
+                <action android:name="com.owncloud.android.workaround.accounts.CREATE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.digilocker.android.ui.activity.PassCodeActivity" android:exported="false" android:launchMode="1" android:windowSoftInputMode="20"/>
+        <activity android:name="com.digilocker.android.ui.activity.GenericExplanationActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ErrorsWhileCopyingHandlerActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.LogHistoryActivity" android:exported="false" android:screenOrientation="1"/>
+        <receiver android:name="in.gov.dlocker.receiver.SmsBroadcastReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+        <activity android:label="@id/0x7F120143" android:icon="@id/0x7F08009F" android:name="com.digilocker.android.ui.activity.CopyToClipboardActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.TutorialActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.NCBT" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.CryptoUtils.CryptoPrefrenceManager" android:exported="false" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.IssuedAadharCardView" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.NegdIDCardView" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.QrDisabilityCert" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.DisabilityCard" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.PanCardView" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRJACXMarksheet" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.QRJACXIIMarksheet" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.JACXPassingCertificate" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.JACXIIPassingCertificate" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.qrscanner.QRScanningActivity" android:exported="false" android:screenOrientation="1"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B000A"/>
+        <meta-data android:name="preloaded_fonts" android:resource="@id/0x7F030007"/>
+        <service android:name="com.digilocker.android.fcm.DLMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:label="@id/0x7F120254" android:name="com.digilocker.android.qrscanner.MaterialBarcodeScannerActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:label="@id/0x7F120436" android:name="com.digilocker.android.ui.activity.ActivityOpenSourceLicences" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.ActivityAndroidSDKLicence" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="com.digilocker.android.ui.activity.BaseActivity" android:exported="false" android:screenOrientation="1"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="in.gov.dlocker.ui.uploads.service.Upload_Service" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="startservice"/>
+            </intent-filter>
+        </service>
+        <service android:name="in.gov.dlocker.ui.hlocker.services.HealthLockerService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="startservicehl"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x7F1301AC" android:name="com.stripe.android.view.AddPaymentMethodActivity"/>
+        <activity android:theme="@id/0x7F1301AC" android:name="com.stripe.android.view.PaymentMethodsActivity"/>
+        <activity android:theme="@id/0x7F1301AC" android:name="com.stripe.android.view.PaymentFlowActivity"/>
+        <activity android:theme="@id/0x7F1301AC" android:name="com.stripe.android.view.PaymentAuthWebViewActivity" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1301AC" android:name="com.stripe.android.view.PaymentRelayActivity"/>
+        <activity android:theme="@id/0x7F1301AC" android:name="com.stripe.android.view.Stripe3ds2CompletionActivity"/>
+        <activity android:theme="@id/0x7F1301AF" android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"/>
+        <activity android:theme="@id/0x7F1301AF" android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"/>
+        <activity android:theme="@id/0x7F1301A8" android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"/>
+        <activity android:theme="@id/0x7F1301A8" android:name="com.stripe.android.stripe3ds2.views.ChallengeProgressActivity"/>
+        <activity android:theme="@id/0x7F13012B" android:name="com.karumi.dexter.DexterActivity"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="genericidp" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x01030010" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="recaptcha" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.digilocker.android.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.digilocker.android.androidx-startup">
+            <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050002" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050004" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050002" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F150013"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

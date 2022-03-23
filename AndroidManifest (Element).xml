@@ -1,0 +1,298 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="40104042" android:versionName="1.4.4" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="im.vector.app" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <queries>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application android:theme="@id/0x7F1202C0" android:label="@id/0x7F110092" android:icon="@id/0x7F0E0000" android:name="im.vector.app.VectorApplication" android:taskAffinity="im.vector.app.H_9e8067dd" android:allowBackup="false" android:supportsRtl="true" android:resizeableActivity="true" android:networkSecurityConfig="@id/0x7F150005" android:roundIcon="@id/0x7F0E0001" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true"/>
+        <service android:name="im.vector.app.gplay.push.fcm.VectorFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="android.max_aspect" android:value="9.9"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@id/0x7F150000"/>
+        <activity android:theme="@id/0x7F1202BF" android:name="im.vector.app.features.MainActivity"/>
+        <activity-alias android:name="im.vector.app.features.Alias" android:exported="true" android:targetActivity="im.vector.app.features.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@id/0x7F15000A"/>
+        </activity-alias>
+        <activity android:name="im.vector.app.features.home.HomeActivity"/>
+        <activity android:theme="@id/0x7F1202B6" android:name="im.vector.app.features.login.SSORedirectRouterActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="element" android:host="connect"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="im.vector.app.features.login.LoginActivity" android:launchMode="2" android:windowSoftInputMode="16"/>
+        <activity android:name="im.vector.app.features.onboarding.OnboardingActivity" android:launchMode="2" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1202B6" android:name="im.vector.app.features.media.VectorAttachmentViewerActivity"/>
+        <activity android:name="im.vector.app.features.media.BigImageViewerActivity"/>
+        <activity android:label="@id/0x7F110930" android:name="im.vector.app.features.rageshake.BugReportActivity"/>
+        <activity android:label="@id/0x7F110935" android:name="im.vector.app.features.settings.VectorSettingsActivity" android:windowSoftInputMode="16"/>
+        <activity android:label="@id/0x7F110934" android:name="im.vector.app.features.crypto.keysbackup.restore.KeysBackupRestoreActivity"/>
+        <activity android:label="@id/0x7F110933" android:name="im.vector.app.features.crypto.keysbackup.setup.KeysBackupSetupActivity"/>
+        <activity android:label="@id/0x7F11027F" android:name="im.vector.app.features.crypto.keysbackup.settings.KeysBackupManageActivity"/>
+        <activity android:label="@id/0x7F110932" android:name="im.vector.app.features.reactions.EmojiReactionPickerActivity"/>
+        <activity android:name="im.vector.app.features.roomdirectory.createroom.CreateRoomActivity"/>
+        <activity android:name="im.vector.app.features.roomdirectory.RoomDirectoryActivity"/>
+        <activity android:name="im.vector.app.features.roomdirectory.roompreview.RoomPreviewActivity"/>
+        <activity android:name="im.vector.app.features.home.room.filtered.FilteredRoomsActivity"/>
+        <activity android:name="im.vector.app.features.home.room.threads.ThreadsActivity"/>
+        <activity android:name="im.vector.app.features.home.room.detail.RoomDetailActivity" android:parentActivityName="im.vector.app.features.home.HomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".features.home.HomeActivity"/>
+        </activity>
+        <activity android:name="im.vector.app.features.debug.DebugMenuActivity"/>
+        <activity android:name="im.vector.app.features.createdirect.CreateDirectRoomActivity"/>
+        <activity android:name="im.vector.app.features.invite.InviteUsersToRoomActivity"/>
+        <activity android:name="im.vector.app.features.webview.VectorWebViewActivity"/>
+        <activity android:name="im.vector.app.features.link.LinkHandlerActivity" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https"/>
+                <data android:host="riot.im"/>
+                <data android:host="app.element.io"/>
+                <data android:host="mobile.element.io"/>
+                <data android:host="develop.element.io"/>
+                <data android:host="staging.element.io"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="im.vector.app.features.permalink.PermalinkHandlerActivity" android:enabled="true" android:exported="true" android:launchMode="2" android:targetActivity="im.vector.app.features.link.LinkHandlerActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:host="matrix.to"/>
+                <data android:scheme="element" android:host="user"/>
+                <data android:scheme="element" android:host="room"/>
+            </intent-filter>
+        </activity-alias>
+        <activity android:name="im.vector.app.features.share.IncomingShareActivity" android:exported="true" android:parentActivityName="im.vector.app.features.home.HomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".features.home.HomeActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <data android:mimeType="*/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <data android:mimeType="*/*"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="androidx.sharetarget.ChooserTargetServiceCompat"/>
+        </activity>
+        <activity android:name="im.vector.app.features.roomprofile.RoomProfileActivity"/>
+        <activity android:name="im.vector.app.features.roomprofile.settings.joinrule.RoomJoinRuleActivity"/>
+        <activity android:name="im.vector.app.features.signout.hard.SignedOutActivity"/>
+        <activity android:name="im.vector.app.features.signout.soft.SoftLogoutActivity" android:windowSoftInputMode="16"/>
+        <activity android:name="im.vector.app.features.roommemberprofile.RoomMemberProfileActivity" android:parentActivityName="im.vector.app.features.home.HomeActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".features.home.HomeActivity"/>
+        </activity>
+        <activity android:name="im.vector.app.features.qrcode.QrCodeScannerActivity"/>
+        <activity android:name="im.vector.app.features.crypto.quads.SharedSecureStorageActivity"/>
+        <activity android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1202B5" android:name="im.vector.app.features.attachments.preview.AttachmentsPreviewActivity"/>
+        <activity android:name="im.vector.app.features.call.VectorCallActivity" android:taskAffinity=".features.call.VectorCallActivity.H_9e8067dd" android:excludeFromRecents="true" android:launchMode="2" android:configChanges="3456" android:supportsPictureInPicture="true"/>
+        <activity android:name="im.vector.app.features.call.conference.VectorJitsiActivity" android:launchMode="2" android:configChanges="3456" android:supportsPictureInPicture="true"/>
+        <activity android:name="im.vector.app.features.terms.ReviewTermsActivity"/>
+        <activity android:name="im.vector.app.features.widgets.WidgetActivity"/>
+        <activity android:name="im.vector.app.features.pin.PinActivity"/>
+        <activity android:name="im.vector.app.features.analytics.ui.consent.AnalyticsOptInActivity"/>
+        <activity android:name="im.vector.app.features.home.room.detail.search.SearchActivity"/>
+        <activity android:name="im.vector.app.features.usercode.UserCodeActivity"/>
+        <activity android:name="im.vector.app.features.call.transfer.CallTransferActivity"/>
+        <activity android:name="im.vector.app.features.auth.ReAuthActivity" android:launchMode="3"/>
+        <activity android:name="im.vector.app.features.devtools.RoomDevToolActivity"/>
+        <activity android:name="im.vector.app.features.spaces.SpacePreviewActivity"/>
+        <activity android:name="im.vector.app.features.spaces.SpaceExploreActivity"/>
+        <activity android:name="im.vector.app.features.spaces.SpaceCreationActivity"/>
+        <activity android:name="im.vector.app.features.spaces.manage.SpaceManageActivity"/>
+        <activity android:name="im.vector.app.features.spaces.people.SpacePeopleActivity"/>
+        <activity android:name="im.vector.app.features.spaces.leave.SpaceLeaveAdvancedActivity"/>
+        <activity android:name="im.vector.app.features.poll.create.CreatePollActivity"/>
+        <activity android:name="im.vector.app.features.location.LocationSharingActivity"/>
+        <service android:name="im.vector.app.core.services.CallService" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </service>
+        <service android:name="im.vector.app.core.services.VectorSyncService" android:exported="false"/>
+        <service android:name="im.vector.app.features.call.telecom.VectorConnectionService" android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="im.vector.app.features.call.service.CallHeadsUpActionReceiver" android:exported="false"/>
+        <receiver android:name="im.vector.app.features.settings.troubleshoot.TestNotificationReceiver" android:exported="false"/>
+        <receiver android:name="im.vector.app.features.notifications.NotificationBroadcastReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="androidx.media.session.MediaButtonReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="im.vector.app.androidx-startup">
+            <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+        </provider>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="im.vector.app.fileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150009"/>
+        </provider>
+        <service android:name="androidx.sharetarget.ChooserTargetServiceCompat" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService"/>
+            </intent-filter>
+        </service>
+        <provider android:name="org.matrix.android.sdk.api.session.file.MatrixSDKFileProvider" android:exported="false" android:authorities="im.vector.app.mx-sdk.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150009"/>
+        </provider>
+        <provider android:name="im.vector.lib.multipicker.provider.MultiPickerFileProvider" android:exported="false" android:authorities="im.vector.app.multipicker.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150004"/>
+        </provider>
+        <activity android:name="org.jitsi.meet.sdk.JitsiMeetActivity" android:launchMode="2" android:configChanges="3504" android:windowSoftInputMode="16" android:resizeableActivity="true" android:supportsPictureInPicture="true"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <service android:name="org.jitsi.meet.sdk.ConnectionService" android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService"/>
+            </intent-filter>
+        </service>
+        <service android:name="org.jitsi.meet.sdk.JitsiMeetOngoingConferenceService" android:foregroundServiceType="32"/>
+        <provider android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider" android:enabled="false" android:exported="false" android:authorities="im.vector.app.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150001"/>
+        </provider>
+        <provider android:name="com.oblador.performance.StartTimeProvider" android:exported="false" android:authorities="im.vector.app.start.time.provider"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:label="@id/0x7F1105CC" android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"/>
+        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"/>
+        <activity android:name="im.dlg.dialer.DialpadActivity"/>
+        <activity android:theme="@id/0x7F120129" android:name="androidx.biometric.DeviceCredentialHandlerActivity" android:exported="true"/>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="im.vector.app.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0A000D"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050005" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050003" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="ru.noties.jlatexmath.JLatexMathInitProvider" android:exported="false" android:authorities="im.vector.app.jlatexmathinitprovider"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+    </application>
+</manifest>

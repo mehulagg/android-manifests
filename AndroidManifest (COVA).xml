@@ -1,0 +1,140 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="89" android:versionName="1.3.60" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="in.gov.punjab.cova" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-feature android:name="android.hardware.location.gps"/>
+    <uses-feature android:name="android.hardware.location.network"/>
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@id/0x7F120008" android:label="@id/0x7F110032" android:icon="@id/0x7F0E0000" android:name="in.gov.punjab.cova.CovaApplication" android:allowBackup="false" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="false" android:usesCleartextTraffic="true" android:roundIcon="@id/0x7F0E0002" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:isSplitRequired="true" android:requestLegacyExternalStorage="true">
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.BLO.EmployeeChangePasswordActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Tester.TesterDashboardFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Tester.FormSubmissionActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.BLO.EmpSelfInspectionActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.HA.HospitalAdminDashboard" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.HealthStatus.TestStatusFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.PlasmaKendraFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Pass.ViewKftPassFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Pass.ViewRegPassFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Pass.PassDashboardFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.HealthStatus.FluCentersFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.FormVolunteerPlasmaFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.HomeLocationFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.MissionFateh.MissionFatehProfileFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.MissionFateh.MissionFatehQuizFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.MissionFateh.MissionFatehRegFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.SelfInspectionFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.MissionFateh.MissionFatehFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Hrms.HrmsCustomDashFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Hrms.PasswordChangeFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Hrms.HrmsDashFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.EPass.ViewDetailedEPassFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.EPass.ViewEPassFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.EPass.GenerateEPassFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Hrms.ViewAttendanceFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Hrms.MarkAttendanceFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.BLO.InspectionFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.BLO.BLODashboardFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Police.MarkCompletedFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Activities.ReportInterStateTravel" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Police.RegisteredTravellersFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.Employee.Police.PCDashboardFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Activities.NearbyPHFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Activities.SettingsFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Activities.UspFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.HealthStatus.FormHomeQuarantinedFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.CurfewPassListFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.CurfewPassFrame" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Frames.DashboardFrameN" android:screenOrientation="1" android:configChanges="516"/>
+        <activity android:name="in.gov.punjab.cova.Activities.MassGatheringActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.Activities.NotificationActivity" android:screenOrientation="1" android:configChanges="4"/>
+        <activity android:name="in.gov.punjab.cova.MainActivity" android:screenOrientation="1" android:configChanges="4" android:windowSoftInputMode="16">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <service android:name="in.gov.punjab.cova.Utils.Tracking.UserBLETracker" android:enabled="true" android:configChanges="4" android:foregroundServiceType="8"/>
+        <service android:name="in.gov.punjab.cova.Utils.CovaTracker.AdvertiserService" android:enabled="true" android:configChanges="4" android:foregroundServiceType="8"/>
+        <service android:name="in.gov.punjab.cova.Utils.FCM.FCMService" android:exported="false" android:configChanges="4">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@id/0x7F07009E"/>
+        <receiver android:name="in.gov.punjab.cova.Utils.AutoReadOtp.OtpARBroadcastReceiver" android:exported="true" android:configChanges="4">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAJhOPjYzir5n9mDzHPKZeyN7njPbnKXAc"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7158518802466528~2915331701"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="in.gov.punjab.cova.myFileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140002"/>
+        </provider>
+        <activity android:theme="@id/0x7F120225" android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity" android:screenOrientation="-1"/>
+        <activity android:theme="@id/0x7F1201EC" android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1"/>
+        <provider android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider" android:exported="false" android:authorities="in.gov.punjab.cova.imagepicker.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140001"/>
+        </provider>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <activity android:theme="@id/0x7F1200F4" android:name="com.nabinbhandari.android.permissions.PermissionsActivity"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="in.gov.punjab.cova.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0A0008"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F140008"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

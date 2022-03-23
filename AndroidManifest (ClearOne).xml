@@ -1,0 +1,201 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="30" android:versionName="0.1.30" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" package="in.cleartax.clearone" platformBuildVersionCode="31" platformBuildVersionName="12">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <package android:name="com.truecaller"/>
+        <package android:name="com.truecaller.debug"/>
+        <intent>
+            <action android:name="android.intent.action.DIAL"/>
+            <data android:scheme="tel"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+            <data android:mimeType="*/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO"/>
+            <data android:scheme="mailto"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="com.truecaller.permission.sdk.internal.read_account_state"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <application android:theme="@id/0x7F12000A" android:label="@id/0x7F11001F" android:icon="@id/0x7F0F0000" android:name="in.cleartax.clearone.MainApplication" android:allowBackup="false" android:extractNativeLibs="false" android:roundIcon="@id/0x7F0F0001" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:isSplitRequired="true" android:requestLegacyExternalStorage="true" android:localeConfig="@id/0x7F14000E">
+        <meta-data android:name="com.truecaller.android.sdk.PartnerKey" android:value="JUtAq4f7fa9c40b4f44528d454e54edd472a9"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="in.cleartax.clearone" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140000"/>
+        </provider>
+        <service android:name="in.cleartax.clearone.notification.AppFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="in.cleartax.clearone.receiver.MultipleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="in.cleartax.clearone.receiver.SmsBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_mh4jY1J5jB9p1kxyJvG14dlmyzecBJmn"/>
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_dcXc91R4ctYnZfAtOOliwnogsvnlvOaF"/>
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false"/>
+        <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="RKR-74R-KR6Z"/>
+        <meta-data android:name="CLEVERTAP_TOKEN" android:value="24a-232"/>
+        <meta-data android:name="CLEVERTAP_REGION" android:value="in1"/>
+        <receiver android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.clevertap.android.sdk.pushnotification.CTNotificationIntentService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.PUSH_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="CLEVERTAP_BACKGROUND_SYNC" android:value="1"/>
+        <meta-data android:name="CLEVERTAP_NOTIFICATION_ICON" android:value="notif_icon"/>
+        <meta-data android:name="CLEVERTAP_APP_PACKAGE" android:value="in.cleartax.clearone"/>
+        <meta-data android:name="CLEVERTAP_USE_GOOGLE_AD_ID" android:value="1"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@id/0x7F0801BA"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@id/0x7F060030"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@id/0x7F1100D6"/>
+        <meta-data android:name="io.sentry.anr.enable" android:value="false"/>
+        <activity android:theme="@id/0x7F12000A" android:label="@id/0x7F11001F" android:name="in.cleartax.clearone.MainActivity" android:exported="true" android:launchMode="2" android:screenOrientation="1" android:configChanges="1712" android:windowSoftInputMode="16" android:largeHeap="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="clrone"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="@id/0x7F1100D5"/>
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="@id/0x7F110025"/>
+                <data android:scheme="https" android:host="@id/0x7F110024"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="io.sentry.auto-init" android:value="false"/>
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="true"/>
+        <meta-data android:name="firebase_analytics_collection_deactivated" android:value="false"/>
+        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="true"/>
+        <meta-data android:name="google_analytics_ssaid_collection_enabled" android:value="true"/>
+        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="true"/>
+        <meta-data android:name="app_data_collection_default_enabled" android:value="true"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:io.invertase.firebase.app.ReactNativeFirebaseAppRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <provider android:name="io.invertase.firebase.app.ReactNativeFirebaseAppInitProvider" android:exported="false" android:authorities="in.cleartax.clearone.reactnativefirebaseappinitprovider" android:initOrder="99"/>
+        <provider android:name="com.vinzscam.reactnativefileviewer.FileProvider" android:exported="false" android:authorities="in.cleartax.clearone.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140002"/>
+        </provider>
+        <activity android:theme="@id/0x7F1201EF" android:name="com.yalantis.ucrop.UCropActivity"/>
+        <provider android:name="com.imagepicker.ImagePickerProvider" android:exported="false" android:authorities="in.cleartax.clearone.imagepickerprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140003"/>
+        </provider>
+        <provider android:name="cl.json.RNShareFileProvider" android:exported="false" android:authorities="in.cleartax.clearone.rnshare.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140007"/>
+        </provider>
+        <provider android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider" android:exported="false" android:authorities="in.cleartax.clearone.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140001"/>
+        </provider>
+        <provider android:name="com.RNFetchBlob.Utils.FileProvider" android:exported="false" android:authorities="in.cleartax.clearone.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140004"/>
+        </provider>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <activity android:theme="@id/0x01030010" android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F1201DE" android:name="com.clevertap.android.sdk.CTInboxActivity" android:configChanges="32"/>
+        <service android:name="com.clevertap.android.sdk.pushnotification.amp.CTBackgroundIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.BG_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.clevertap.android.sdk.pushnotification.amp.CTBackgroundJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F12022F" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:enabled="false" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11000"/>
+        </service>
+        <service android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService" android:enabled="false" android:exported="false"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <provider android:name="com.google.firebase.perf.provider.FirebasePerfProvider" android:exported="false" android:authorities="in.cleartax.clearone.firebaseperfprovider" android:initOrder="101"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x7F120102" android:name="im.crisp.client.ChatActivity" android:configChanges="1152"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="in.cleartax.clearone.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B000A"/>
+        <provider android:name="io.sentry.android.core.SentryInitProvider" android:exported="false" android:authorities="in.cleartax.clearone.SentryInitProvider"/>
+        <provider android:name="io.sentry.android.core.SentryPerformanceProvider" android:exported="false" android:authorities="in.cleartax.clearone.SentryPerformanceProvider" android:initOrder="200"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="in.cleartax.clearone.lifecycle-process"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F14000D"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

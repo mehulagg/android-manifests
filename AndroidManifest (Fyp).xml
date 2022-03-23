@@ -1,0 +1,387 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="59" android:versionName="2.1.1" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.fypmoney" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <data android:scheme="upi" android:host="pay"/>
+        </intent>
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <package android:name="com.upi.axispay"/>
+        <package android:name="com.axis.mobile"/>
+        <package android:name="com.fisglobal.bandhanupi.app"/>
+        <package android:name="com.bankofbaroda.upi"/>
+        <package android:name="in.org.npci.upiapp"/>
+        <package android:name="com.canarabank.mobility"/>
+        <package android:name="com.citiuat"/>
+        <package android:name="com.dbs.in.digitalbank"/>
+        <package android:name="com.olive.dcb.upi"/>
+        <package android:name="com.finopaytech.bpayfino"/>
+        <package android:name="com.freecharge.android"/>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="com.snapwork.hdfc"/>
+        <package android:name="com.mgs.hsbcupi"/>
+        <package android:name="com.csam.icici.bank.imobile"/>
+        <package android:name="com.icicibank.pockets"/>
+        <package android:name="com.euronet.iobupi"/>
+        <package android:name="com.mgs.induspsp"/>
+        <package android:name="com.fss.jnkpsp"/>
+        <package android:name="com.jio.myjio"/>
+        <package android:name="com.mycompany.kvb"/>
+        <package android:name="com.kvb.mobilebanking"/>
+        <package android:name="com.lcode.smartz"/>
+        <package android:name="com.msf.kbank.mobile"/>
+        <package android:name="com.upi.federalbank.org.lotza"/>
+        <package android:name="com.infrasofttech.mahaupi"/>
+        <package android:name="com.mipay.in.wallet"/>
+        <package android:name="com.mobikwik_new"/>
+        <package android:name="com.myairtelapp"/>
+        <package android:name="com.mobikwik_new"/>
+        <package android:name="com.onymy.paybee.prod"/>
+        <package android:name="net.one97.paytm"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="com.Version1"/>
+        <package android:name="com.samsung.android.spay"/>
+        <package android:name="com.sbi.upi"/>
+        <package android:name="com.SIBMobile"/>
+        <package android:name="com.truecaller"/>
+        <package android:name="com.infrasoft.uboi"/>
+        <package android:name="com.lcode.ucoupi"/>
+        <package android:name="com.YesBank"/>
+        <package android:name="com.dreamplug.androidapp"/>
+        <package android:name="money.bullet"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" android:requiredFeature="false"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:theme="@id/0x7F140227" android:label="@id/0x7F130076" android:icon="@id/0x7F0F0000" android:name="com.fypmoney.application.PockketApplication" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="false" android:usesCleartextTraffic="true" android:networkSecurityConfig="@id/0x7F160003" android:roundIcon="@id/0x7F0F0000" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:isSplitRequired="true" android:requestLegacyExternalStorage="true" android:localeConfig="@id/0x7F16000A">
+        <activity android:name="com.fypmoney.view.ordercard.cardofferdetails.CardOfferDetailsActivity" android:exported="false"/>
+        <activity android:name="com.fypmoney.view.ordercard.activateofflinecard.ScanCardKitNumberActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.ordercard.placeordersuccess.PlaceOrderSuccessActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.ordercard.personaliseyourcard.PersonaliseYourCardActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.ordercard.cardorderoffer.CardOrderOfferActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.notifymeordercard.NotifyMeOrderCardActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.webview.WebViewActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.community.SocialCommunityActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.referandearn.view.ReferAndEarnActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.HtmlOpenerView" android:screenOrientation="1"/>
+        <activity android:label="@id/0x7F1304F5" android:name="com.fypmoney.view.activity.AddTaskActivity" android:screenOrientation="1"/>
+        <activity android:label="@id/0x7F1304F6" android:name="com.fypmoney.view.activity.ChoresHistoryActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F140199" android:label="@id/0x7F130076" android:name="com.fypmoney.view.activity.SplashView" android:exported="true" android:launchMode="1" android:screenOrientation="1" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F140229" android:name="com.fypmoney.view.activity.WalkThroughMainView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.ordercard.placeorder.PlaceOrderCardView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.ordercard.OrderCardView" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F140229" android:name="com.fypmoney.view.activity.SetPinView" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F140229" android:name="com.fypmoney.view.activity.AddMoneyView" android:launchMode="2" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F140229" android:name="com.fypmoney.view.ordercard.trackorder.TrackOrderView" android:screenOrientation="1" android:hardwareAccelerated="false"/>
+        <activity android:name="com.fypmoney.view.activity.FirstScreenView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.BankTransactionHistoryView" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="your.custom.ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.activity.LoginView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.SelectInterestView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.EnterOtpView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.CreateAccountView" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.activity.LoginSuccessView" android:screenOrientation="1" android:noHistory="true"/>
+        <activity android:name="com.fypmoney.view.activity.ContactListView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.EnterAmountForPayRequestView" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:name="com.fypmoney.view.activity.PayRequestProfileView" android:launchMode="2" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ReferralCodeView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.CreateAccountSuccessView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.CommunityView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ContactView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.HomeView" android:launchMode="2" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.UserProfileView" android:launchMode="2" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.NotificationView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.MemberView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.AddMemberView" android:launchMode="2" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:name="com.fypmoney.view.activity.UserFeedsDetailView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ChoresActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.InviteRejectedView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.UserTypeOnLoginView" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.activity.StayTunedView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.InviteMemberView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.AadhaarAccountActivationView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.AadhaarVerificationView" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:name="com.fypmoney.view.activity.TransactionHistoryView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ActivationSuccessWithAadhaarView" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.activity.AddMoneyUpiDebitView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.PayUSuccessView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.QrCodeScannerView" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F140403" android:name="com.fypmoney.view.activity.CaptureActivityPortrait" android:stateNotNeeded="true" android:screenOrientation="7" android:windowSoftInputMode="3"/>
+        <activity android:name="com.fypmoney.view.activity.ImagePickerView" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F14000B" android:name="com.yalantis.ucrop.UCropActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.StoreWebpageOpener" android:screenOrientation="1" android:hardwareAccelerated="false"/>
+        <activity android:name="com.fypmoney.view.activity.ChoresSelectSampleActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ContactViewAddMember" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.PermissionsActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.OfferDetailActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.rewardsAndWinnings.RewardsActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.rewardsAndWinnings.activity.SpinWheelViewDark" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.storeoffers.OffersScreen" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.AgeAllowedActivationView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.rewardsAndWinnings.activity.ScratchCardActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.StoreWebpageOpener2" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.UserFeedsInAppWebview" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.rewardsAndWinnings.activity.RewardsHistoryView" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.rewardsAndWinnings.CashBackWonHistoryActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.PayUSuccessViewCashbackWon" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.home.main.homescreen.view.HomeActivity" android:launchMode="2" android:screenOrientation="1"/>
+        <activity android:label="HomeView" android:name="com.moe.pushlibrary.activities.MoEActivity" android:parentActivityName="com.fypmoney.view.home.main.homescreen.view.HomeActivity"/>
+        <activity android:name="com.fypmoney.view.home.main.explore.ViewDetails.ExploreInAppWebview"/>
+        <activity android:name="com.fypmoney.view.fragment.OffersStoreActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.fragment.StoresActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.SelectRelationActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.InviteParentSiblingActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.PendingRequestActivity" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.register.PersonalisedOffersActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ChooseInterestRegisterView" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.register.PanAdhaarSelectionActivity" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.register.KycDetailsActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.OpenGiftActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.YourGiftsActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.WaitlistAprovalActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.register.TimeLineActivity" android:screenOrientation="1"/>
+        <activity android:name="com.fypmoney.view.activity.ChooseInterestHomeView" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F140402" android:name="com.fypmoney.util.videoplayer.VideoActivity2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F140402" android:name="com.fypmoney.util.videoplayer.VideoActivityWithExplore" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.fypmoney.view.upgradetokyc.UpgradeToKycInfoActivity" android:screenOrientation="1"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@id/0x7F130212"/>
+        <meta-data android:name="payu_debug_mode_enabled" android:value="false"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.fypmoney.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F160002"/>
+        </provider>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.fypmoney.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F160001"/>
+        </provider>
+        <receiver android:name="com.adjust.sdk.AdjustReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.fypmoney.services.MyFirebaseMessagingService" android:enabled="true" android:exported="false" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x7F140220" android:name="com.payu.gpay.GPayResponseActivity"/>
+        <meta-data android:name="com.google.android.gms.wallet.api.enabled" android:value="true"/>
+        <activity android:name="com.payu.custombrowser.CBActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <service android:name="com.payu.custombrowser.services.SnoozeService"/>
+        <meta-data android:name="com.phonepe.android.sdk.Debuggable" android:value="false"/>
+        <meta-data android:name="com.phonepe.android.sdk.isUAT" android:value="false"/>
+        <activity android:theme="@id/0x7F140220" android:name="com.payu.phonepe.PayUPhonePeActivity"/>
+        <activity android:theme="@id/0x7F140220" android:name="com.payu.upisdk.upiintent.PaymentResponseUpiSdkActivity" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F140260" android:name="com.payu.otpparser.OTPParserActivity" android:launchMode="1"/>
+        <provider android:name="androidx.startup.InitializationProvider" android:exported="false" android:authorities="com.fypmoney.androidx-startup">
+            <meta-data android:name="com.payu.crashlogger.CrashProviderInitializer" android:value="androidx.startup"/>
+        </provider>
+        <activity android:theme="@id/0x7F1403E0" android:name="com.facebook.FacebookActivity" android:configChanges="1456"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fbconnect" android:host="cct.com.fypmoney"/>
+            </intent-filter>
+        </activity>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.fypmoney.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.facebook.AuthenticationTokenManager$CurrentAuthenticationTokenChangedBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_AUTHENTICATION_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.ktx.FirebaseDynamicLinksKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.display.FirebaseInAppMessagingDisplayRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.inappmessaging.FirebaseInAppMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@id/0x7F1403F3" android:name="com.phonepe.intent.sdk.ui.TransactionActivity" android:configChanges="128" android:windowSoftInputMode="34"/>
+        <service android:name="com.phonepe.intent.sdk.ui.PreCacheService" android:exported="false"/>
+        <activity android:theme="@id/0x7F140142" android:name="com.phonepe.intent.sdk.ui.UpiAppSelectionActivity"/>
+        <activity android:theme="@id/0x7F1403F2" android:name="com.phonepe.intent.sdk.ui.UpiAppsSelectionDialogActivity"/>
+        <activity android:theme="@id/0x7F1403F2" android:name="com.phonepe.intent.sdk.ui.OpenIntentTransactionActivity"/>
+        <activity android:theme="@id/0x7F1400FC" android:name="com.karumi.dexter.DexterActivity"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.ConversationDetailActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.DeeplinkInterstitialActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.PictureAttachmentActivity" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.CategoryListActivity"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.ArticleListActivity" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.ArticleDetailActivity"/>
+        <activity android:theme="@id/0x7F14011C" android:name="com.freshchat.consumer.sdk.activity.InterstitialActivity" android:configChanges="1152"/>
+        <service android:name="com.freshchat.consumer.sdk.service.FreshchatService"/>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.freshchat.consumer.sdk.provider.FreshchatInitProvider" android:enabled="true" android:exported="false" android:multiprocess="true" android:authorities="com.fypmoney.freshchat.initprovider"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.FAQCategoriesActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.FAQListActivity" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.FAQDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F14022D" android:name="com.freshchat.consumer.sdk.activity.FAQSearchActivity" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <service android:name="com.moengage.richnotification.internal.MoERichPushIntentService" android:exported="false"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.fypmoney.lifecycle-process"/>
+        <activity android:theme="@id/0x7F140403" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:clearTaskOnLaunch="true" android:stateNotNeeded="true" android:screenOrientation="6" android:windowSoftInputMode="3"/>
+        <receiver android:name="com.google.firebase.messaging.directboot.FirebaseMessagingDirectBootReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true" android:directBootAware="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.messaging.RECEIVE_DIRECT_BOOT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.fypmoney.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B001B"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F14025F" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11001"/>
+        </service>
+        <service android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService" android:enabled="false" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <service android:name="com.moengage.core.MoEWorker" android:exported="false"/>
+        <receiver android:name="com.moengage.core.MoEAlarmReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.moengage.core.DataSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.moengage.pushbase.MoEPushReceiver" android:exported="false"/>
+        <activity android:theme="@id/0x01030011" android:name="com.moengage.pushbase.activities.PushTracker" android:configChanges="1152" android:noHistory="true"/>
+        <activity android:theme="@id/0x01030011" android:name="com.moengage.pushbase.activities.PushClickDialogTracker" android:taskAffinity=":NotificationDialog" android:excludeFromRecents="true" android:launchMode="2" android:configChanges="1152"/>
+        <service android:name="com.moengage.pushbase.push.MoEPushWorker" android:exported="false"/>
+        <service android:name="com.moengage.rtt.internal.RttIntentService" android:exported="false"/>
+        <receiver android:name="com.moengage.rtt.internal.RttReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.moengage.rtt.internal.RttSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.moengage.pushamp.internal.PushAmpAlarmReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.moengage.pushamp.internal.PushAmpIntentService" android:exported="false"/>
+        <service android:name="com.moengage.pushamp.internal.PushAmpSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:name="com.moengage.integrationverifier.internal.IntegrationVerificationActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="moengage" android:host="integration"/>
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F160009"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

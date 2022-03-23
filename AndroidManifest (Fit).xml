@@ -1,0 +1,362 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="2026296580" android:versionName="2.75.1.arm64-v8a.release" android:compileSdkVersion="32" android:compileSdkVersionCodename="Tiramisu" package="com.google.android.apps.fitness" platformBuildVersionCode="32" platformBuildVersionName="Tiramisu">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="31"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.any" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait" android:required="false"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <application android:theme="@id/0x7F16019C" android:label="@id/0x7F1503A3" android:icon="@id/0x7F110000" android:name="com.google.android.apps.fitness.FitV2_Application" android:allowBackup="false" android:extractNativeLibs="false" android:usesCleartextTraffic="false" android:roundIcon="@id/0x7F110012">
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA5182VbzpV2iYGYobSNxdkR4nQPnzoDSM"/>
+        <meta-data android:name="com.google.android.gms.maps.API_OPTIONS" android:value="B3MWHUG2MR0DQW"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.apps.fitness_v2.device" android:resource="@id/0x7F180000"/>
+        <service android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService" android:enabled="false" android:exported="false" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.apps.fitness_v2.device" android:resource="@id/0x7F140003"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.apps.fitness_v2.ui_device" android:resource="@id/0x7F140004"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.apps.fitness_v2.ui_user" android:resource="@id/0x7F140005"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.apps.fitness_v2.user" android:resource="@id/0x7F140006"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.clearcut_client" android:resource="@id/0x7F140007"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.consentverifier" android:resource="@id/0x7F140008"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.notifications.platform" android:resource="@id/0x7F14000B"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.internal.growth.growthkit" android:resource="@id/0x7F140009"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.mdi.sync" android:resource="@id/0x7F14000A"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.onegoogle" android:resource="@id/0x7F14000C"/>
+            <meta-data android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.performance.primes" android:resource="@id/0x7F14000D"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.performance.primes" android:resource="@id/0x7F14000E"/>
+            <meta-data android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.surveys" android:resource="@id/0x7F14000F"/>
+        </service>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.apps.fitness_v2.ui_device" android:resource="@id/0x7F180001"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.apps.fitness_v2.ui_user" android:resource="@id/0x7F180002"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.apps.fitness_v2.user" android:resource="@id/0x7F180003"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.clearcut_client" android:resource="@id/0x7F180004"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.consentverifier" android:resource="@id/0x7F180005"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.notifications.platform" android:resource="@id/0x7F180008"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.internal.growth.growthkit" android:resource="@id/0x7F180006"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.mdi.sync" android:resource="@id/0x7F180007"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.onegoogle" android:resource="@id/0x7F180009"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.performance.primes" android:resource="@id/0x7F18000A"/>
+        <meta-data android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.surveys" android:resource="@id/0x7F18000B"/>
+        <activity android:theme="@id/0x7F16019D" android:label="@id/0x7F150A22" android:name="com.google.android.apps.fitness.activemode.ActiveModeActivity" android:exported="false" android:launchMode="2"/>
+        <service android:name="com.google.android.apps.fitness.activemode.service.ActiveModeService" android:exported="false" android:foregroundServiceType="8"/>
+        <receiver android:name="com.google.android.apps.fitness.data.privacycenter.syncer.ConsentsMigrationReceiver_Receiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.data.privacycenter.syncer.ConsentsDownsyncReceiver_Receiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.apps.fitness.data.profile.impl.UploadFitProfileJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+        <receiver android:name="com.google.android.apps.fitness.gcore.subscriptionrefresh.ScheduleSubscriptionRefreshJobOnUpgrade_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.gcore.subscriptionrefresh.ScheduleSubscriptionRefreshJobOnBoot_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.goal.sync.DailyProgressAlarmSchedulerReceiver_Receiver" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.goal.sync.DailyProgressMidnightResetReceiver_Receiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.apps.fitness.RESET_DAILY_PROGRESS"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.home.goalpopup.notification.OnAppUpgradedListener_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.location.PassiveLocationTrackingReceiver_Receiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.apps.fitness.PASSIVE_LOCATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.location.PassiveLocationManagingReceiver_Receiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.apps.location.context.activity.ACTION_NEW_ACTIVITY_TRANSITION_DETECTED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.apps.fitness.onboarding.OnboardingActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.apps.fitness.shared.account.griffinusersupport.GriffinRefreshReceiver_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.google.android.apps.fitness.shared.account.griffinusersupport.ui.ParentalConsentActivity" android:exported="false"/>
+        <activity android:name="com.google.android.apps.fitness.shared.account.selector.FitSelectAccountActivity" android:exported="false"/>
+        <activity android:label="@id/0x7F15007D" android:name="com.google.android.apps.fitness.shared.container.impl.DetailActivity" android:exported="false" android:launchMode="1" android:parentActivityName="com.google.android.apps.fitness.shared.container.MainActivity"/>
+        <activity android:name="com.google.android.apps.fitness.shared.container.impl.EducationActivity" android:exported="false" android:launchMode="1" android:parentActivityName="com.google.android.apps.fitness.shared.container.MainActivity"/>
+        <activity android:label="@id/0x7F15007E" android:name="com.google.android.apps.fitness.shared.container.impl.EditActivity" android:exported="false" android:launchMode="1" android:windowSoftInputMode="18" android:parentActivityName="com.google.android.apps.fitness.shared.container.MainActivity"/>
+        <activity android:label="@id/0x7F15007C" android:name="com.google.android.apps.fitness.shared.container.impl.AddActivity" android:exported="false" android:launchMode="1" android:windowSoftInputMode="18" android:parentActivityName="com.google.android.apps.fitness.shared.container.MainActivity"/>
+        <activity android:theme="@id/0x7F16019C" android:name="com.google.android.apps.fitness.shared.container.MainActivity" android:exported="true" android:launchMode="2" android:windowSoftInputMode="48"/>
+        <activity-alias android:label="@id/0x7F1503A3" android:name="com.google.android.apps.fitness.welcome.WelcomeActivity" android:exported="true" android:targetActivity="com.google.android.apps.fitness.shared.container.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@id/0x7F180010"/>
+        </activity-alias>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.google.android.apps.fitness.shared.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F18000C"/>
+        </provider>
+        <receiver android:name="com.google.android.apps.fitness.shared.notifications.UpdateNotificationChannelsListener_Receiver" android:enabled="@id/0x7F050004" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.shared.notifications.settingslog.NotificationSettingsLogger_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.apps.fitness.shared.sync.receiver.PlatformSyncListener_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.fitness.SYNC_PROGRESS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F16019C" android:name="com.google.android.apps.fitness.v2.widget.config.MetricSelectorActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.apps.fitness.v2.widget.renderer.WidgetClickReceiver_Receiver" android:exported="true"/>
+        <receiver android:label="@id/0x7F150AC5" android:name="com.google.android.apps.fitness.v2.widget.HaloAppWidgetProvider" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@id/0x7F18000D"/>
+        </receiver>
+        <receiver android:label="@id/0x7F150AC6" android:name="com.google.android.apps.fitness.v2.widget.MetricsAppWidgetProvider" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@id/0x7F18000F"/>
+        </receiver>
+        <receiver android:label="@id/0x7F150AC8" android:name="com.google.android.apps.fitness.v2.widget.SingleMetricAppWidgetProvider" android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@id/0x7F180011"/>
+        </receiver>
+        <activity android:theme="@id/0x7F160409" android:label="Mobile Vitals" android:name="com.google.android.apps.fitness.vivo.VivoActivity" android:exported="false" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F160476" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:exported="false" android:stateNotNeeded="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0C0030"/>
+        <meta-data android:name="com.google.gms.fitness.sdk.version" android:value="22.0.0"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <service android:name="com.google.android.libraries.directboot.DirectBootHelperService" android:enabled="false" android:exported="false" android:process="" android:directBootAware="false"/>
+        <receiver android:name="com.google.android.libraries.internal.growth.growthkit.internal.debug.TestingToolsBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PROMO"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.ADD_PREVIEW_PROMO"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.LOG_DEBUG_DATA"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.SYNC"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.CLEAR_COUNTERS"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_PROMOTIONS"/>
+                <action android:name="com.google.android.libraries.internal.growth.growthkit.FETCH_EVAL_RESULTS"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.android.libraries.internal.growth.growthkit.internal.jobs.impl.GrowthKitBelowLollipopJobService" android:exported="false"/>
+        <receiver android:name="com.google.android.libraries.internal.growth.growthkit.tiktok.GrowthKitBootCompletedListener_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.libraries.onegoogle.accountmenu.accountlayer.AddAccountActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.libraries.onegoogle.flags.disabled" android:value="true"/>
+        <receiver android:name="com.google.android.libraries.performance.primes.transmitter.LifeboatReceiver" android:exported="false" android:process=":primes_lifeboat"/>
+        <receiver android:name="com.google.android.libraries.phenotype.client.stable.AccountRemovedBroadcastReceiver" android:exported="true" android:process="">
+            <intent-filter>
+                <action android:name="android.accounts.action.ACCOUNT_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.android.libraries.phenotype.client.stable.PhenotypeUpdateBackgroundBroadcastReceiver" android:permission="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST" android:exported="true" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x7F1603DC" android:label="@id/0x7F15069D" android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity" android:exported="true"/>
+        <activity android:theme="@id/0x7F1603DC" android:label="@id/0x7F15069D" android:name="com.google.android.libraries.social.licenses.LicenseActivity" android:exported="false"/>
+        <activity android:theme="@id/0x7F1602B9" android:name="com.google.android.libraries.surveys.internal.view.SurveyActivity" android:exported="true" android:process="@id/0x7F1509BF" android:excludeFromRecents="true" android:launchMode="1" android:configChanges="1440" android:windowSoftInputMode="16">
+            <meta-data android:name="distractionOptimized" android:value="true"/>
+        </activity>
+        <receiver android:name="com.google.apps.tiktok.account.data.device.DeviceAccountsChangedReceiver_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.LOGIN_ACCOUNTS_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.apps.tiktok.concurrent.AndroidFuturesService" android:exported="false"/>
+        <service android:name="com.google.apps.tiktok.concurrent.InternalForegroundService" android:exported="false"/>
+        <receiver android:name="com.google.apps.tiktok.experiments.phenotype.ConfigurationUpdatedReceiver_Receiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.google.apps.tiktok.logging.backends.clientlogging.ClientLoggingReceiver_Receiver" android:exported="false" android:process=":client_logging"/>
+        <activity android:theme="@id/0x7F1601A4" android:name="com.google.apps.tiktok.nav.gateway.GatewayActivity" android:exported="true" android:taskAffinity="" android:excludeFromRecents="true"/>
+        <activity-alias android:name="com.google.android.apps.fitness.shared.gateway.FitGateway" android:permission="android.permission.START_VIEW_PERMISSION_USAGE" android:exported="true" android:targetActivity="com.google.apps.tiktok.nav.gateway.GatewayActivity">
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/running"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/biking"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/walking"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.TRACK"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.activity/other"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.sleep"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.step_count.cumulative"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.weight"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vnd.google.fitness.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.google.fitness.data_type/com.google.blood_pressure"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.fitness.ACTIVE_MODE_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.apps.fitness.LOG_WEIGHT_SHORTCUT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE_FOR_PERIOD"/>
+                <action android:name="android.intent.action.VIEW_PERMISSION_USAGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="androidx.camera.core.impl.MetadataHolderService" android:enabled="false" android:exported="false">
+            <meta-data android:name="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" android:value="androidx.camera.camera2.Camera2Config$DefaultProvider"/>
+        </service>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.google.android.apps.fitness.lifecycle-process"/>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050006" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050008" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F050007" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050006" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <uses-library android:name="com.google.android.wearable" android:required="false"/>
+        <service android:name="com.google.android.build.data.PropertiesServiceHolder" android:enabled="false" android:exported="false" android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.build.data.Properties"/>
+            </intent-filter>
+            <meta-data android:name="com.google.android.build.data.properties" android:resource="@id/0x7F140001"/>
+        </service>
+    </application>
+</manifest>

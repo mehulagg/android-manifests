@@ -1,0 +1,286 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="281" android:versionName="8.30" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="com.iPruAMC" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="30"/>
+    <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <application android:label="@id/0x7F1000B4" android:icon="@id/0x7F08006A" android:name="com.iPruAMC.ui.IPruMFApplication" android:allowBackup="false" android:largeHeap="true" android:usesCleartextTraffic="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="io.fabric.ApiKey" android:value="f39390c5b9e3c0c67167df9b89cf7618e92679cc"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0A000A"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@id/0x7F1003E5"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="com.google.android.gms.analytics.globalConfigResource" android:resource="@id/0x7F130001"/>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService"/>
+        <service android:name="com.iPruAMC.fcm.FcmMgsService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.iPruAMC.utils.CampaignReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.iPruAMC.refersh.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.iPruAMC.refersh.UpdateService"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1000B4" android:name="com.iPruAMC.ui.SplashScreen" android:configChanges="1152">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="iprutouch" android:host="open"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10089A" android:name="com.iPruAMC.ui.registration.AppRegistrationScreen" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10046A" android:name="com.iPruAMC.ui.home.NewHomeActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100264" android:name="com.iPruAMC.ui.debtquants.DebtQuantsActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100191" android:name="com.iPruAMC.ui.calculators.CalculatorActivity" android:configChanges="1152" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100C11" android:name="com.iPruAMC.ui.media.MediaActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100C11" android:name="com.iPruAMC.ui.media.MediaDetailsActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10064E" android:name="com.iPruAMC.ui.message.MessagesActivity" android:launchMode="2" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100059" android:name="com.iPruAMC.ui.about.AboutActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100001" android:name="com.iPruAMC.businesssupport.BusinessActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100001" android:name="com.iPruAMC.businesssupport.BusinessDetailActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100191" android:name="com.iPruAMC.ui.calculators.CalculatorListActivity" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100BA3" android:name="com.iPruAMC.ui.call.TouchCallActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1009AB" android:name="com.iPruAMC.ui.settings.SettingsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10064E" android:name="com.iPruAMC.ui.message.MessageDescriptionAcitivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1006F1" android:name="com.iPruAMC.ui.nfo.NfoActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1006F1" android:name="com.iPruAMC.ui.nfo.NfoDescriptionAcitivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1006F1" android:name="com.iPruAMC.ui.settings.UpdateProfileActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10028C" android:name="com.iPruAMC.ui.disclaimer.DisclaimerActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1009CC" android:name="com.iPruAMC.ui.calculators.SIPResultActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1002C1" android:name="com.iPruAMC.ui.downloads.DownloadsActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1002C1" android:name="com.iPruAMC.ui.downloads.DownloadsTabletActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1009AB" android:name="com.iPruAMC.ui.registration.DBTestActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x01030006" android:label="@id/0x7F100132" android:name="com.iPruAMC.ui.calculators.CalculatorDisclaimer" android:screenOrientation="4"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.login.LoginActivity" android:launchMode="2" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.login.NewPasscodeActivity" android:configChanges="1152" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.login.ChangeDisplayNameActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Search" android:name="com.iPruAMC.distributortransaction.search.SearchActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Details" android:name="com.iPruAMC.distributortransaction.search.InvestorDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Redeem" android:name="com.iPruAMC.distributortransaction.redeem.RedeemActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Switch" android:name="com.iPruAMC.distributortransaction.switching.SwitchActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="DistributorSchemesList" android:name="com.iPruAMC.transaction.common.TransactionCommonListActivity"/>
+        <activity android:theme="@id/0x0103000B" android:name="com.iPruAMC.distributortransaction.common.TransactionProgressDialogOnNotificationActivity"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="DistributorSchemesList" android:name="com.iPruAMC.distributortransaction.registration.DistributorRegistrationActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.PortFolioActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.PortfolioSchemeDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="investor redeem" android:name="com.iPruAMC.investortransaction.redeem.InvestorRedeemActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="investor switch" android:name="com.iPruAMC.investortransaction.switching.InvestorSwitchActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Make transaction" android:name="com.iPruAMC.investortransaction.transact.InvestorTransactActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Statements" android:name="com.iPruAMC.transaction.statements.statementsnew.ui.StatementActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="Investor Menu" android:name="com.iPruAMC.investortransaction.common.InvestorDashBoardActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10061C" android:name="com.iPruAMC.investortransaction.manageaccount.ManageAccountActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F10061C" android:name="com.iPruAMC.distributortransaction.manageaccount.ManageAccountActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100BB3" android:name="com.iPruAMC.investortransaction.transactionhistory.TransactionHistoryActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.common.InvestorFolioListActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.manageaccount.ChangeEmailActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.manageaccount.ChangePasswordActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.manageaccount.ChangeContactNumberActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.contactrm.InvestorMailBoxActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.common.BrokerDetailActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.FolioDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.PortfolioSchemeListActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.contactrm.EmailSubjectActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.contactrm.EmailDetailMessageActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.contactrm.ContactUsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.purchase.PurchasePaymentActivity" android:configChanges="1152" android:hardwareAccelerated="true"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.tnc.TransactionTermsAndConditionActivity"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.tnc.PrivacyPolicyActivity"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.registration.InvestorForgotPasswordActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.login.ForgotPasscodeActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.registration.InvestorRegistrationActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100B79" android:name="com.iPruAMC.ui.events.EventsGallleryActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="SIP" android:name="com.iPruAMC.investortransaction.sip.SIPInvestorTransactionActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="SELECT FOLIO" android:name="com.iPruAMC.investortransaction.manageaccount.updatenominee.Activity.FolioActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="UPDATE NOMINEE" android:name="com.iPruAMC.investortransaction.manageaccount.updatenominee.Activity.UpdateNominee" android:configChanges="1152"/>
+        <service android:name="com.iPruAMC.io.MessageDownloader"/>
+        <service android:name="com.iPruAMC.ui.common.KeepAliveService"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100B7A" android:name="com.iPruAMC.ui.events.EventsDetailActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100B78" android:name="com.iPruAMC.ui.events.EventsImageDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100B77" android:name="com.iPruAMC.ui.events.EventsTabActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F100B77" android:name="com.iPruAMC.newinvestor.OnboardingDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorPanActivity" android:configChanges="1152" android:windowSoftInputMode="34">
+            <intent-filter android:autoVerify="true">
+                <data android:scheme="https" android:host="www.iprutouch.com" android:pathPrefix="/fatcakyc"/>
+                <data android:scheme="http" android:host="www.iprutouch.com" android:pathPrefix="/fatcakyc"/>
+                <data android:scheme="https" android:host="www.iprutouch.com" android:pathPrefix="/aadharfatcakyc"/>
+                <data android:scheme="http" android:host="www.iprutouch.com" android:pathPrefix="/aadharfatcakyc"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <action android:name="com.androidsrc.launchfrombrowser"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.SimpleListActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NomineeActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.kycPending.KycPendingActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.sipplus.nominee.SipNomineeActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.PersonalDetailsActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.KycDetailsActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.BankDetailsActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorPurchaseActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.ZeroBalanceActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorBrokerActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.ConfirmDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.PurchaseConfirmationActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorPurchasePaymentActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorSetLoginActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.sip.oldcode.SIPTopUpActivity" android:configChanges="1152" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorInitialScreenActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorDisclaimerActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.NewInvestorTermsConditionActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.InvestCorrectly.InvestCorrectlyHomeActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.InvestCorrectly.VideoDetailedActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.InvestCorrectly.InvestCorrectlyTabletActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.InvestCorrectly.NewsDetailedActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.common.SIPOptionsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.sip.renewal.SIPRenewalActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.insights.PhoneNewsListActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.insights.PhoneNewsDetailsActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.insights.TabletNewsActivity" android:launchMode="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.sip.renewal.SIPRenewalDetailActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.registration.InvestorForgotUserNameActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.PortfolioViewAllFundsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.social.FacebookActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.quiz.QuizMainActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.FatcaDeclarationActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F110112" android:name="com.iPruAMC.utils.MonthPickerActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.common.DistributorHomeActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.chairmancircle.ChairmanCircleAndSipathonActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.Referral.ReferralActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.fatca.FatcaSummaryActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.fatca.TransactionFatcaKycActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.search.SearchAllInvestorActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.statement.StatementClientListActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.whatsYourNumber.WhatsYourNumberActivity" android:configChanges="1152" android:hardwareAccelerated="true"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.whatsNew.WhatsNewActivity" android:configChanges="1152" android:hardwareAccelerated="true"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.SipTransactionHistoryDetailsActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.SipTransactionHistoryListActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.rollover.RollOverActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.stp.StpActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.isave.ISaveEditScreenActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.isave.ISaveTransactionActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.isave.ISaveFolioListActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.manageaccount.AddFolioActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.isave.migrate.ISaveMigrateActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.sip.SipNonOtmPaymentInfoActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.ekyc.EKycActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F11018D" android:name="com.iPruAMC.newinvestor.ekyc.signature.EKycSignatureImageActivity" android:screenOrientation="1" android:configChanges="128"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.sip.SipActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.sip.NewInvestorSIPActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.switching.SwitchActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.purchase.PurchaseActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.MyBriefcaseActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.OpportunitiesActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.OpprotunitiesLinkActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.cesformaturity.CesDetailsActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.ServiceActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.sip.SIPBrokerDetailActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.sip.NewInvestorSipSuccessActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.triggeronmaturity.TriggerActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.common.WebViewActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.ui.home.HomeWebViewActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.aadhaarlinking.AadhaarLinkActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.aadharseeding.AadharSeedingActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.newinvestor.aadharseeding.AadhaarSeedingWebViewActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.sipplus.sipplusupgrade.SipPlusActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.otpverification.InvestorOtpVerification" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.socxo.SOCXOActivity" android:configChanges="1152">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.chairmancircle.ChairmanCircleActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.iPruAMC.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F130002"/>
+        </provider>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.manageaccount.updatenominee.Activity.ClientListActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.calendarsync.ui.newevent.NewEventActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.ServicesLinkActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.calendarsync.ui.eventdetail.EventDetailActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.calendarsync.calendar.CalendarEventActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.contactupdate.ContactDetailActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.calendarsync.ui.calendarlist.CalendarListViewActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.IFAListActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.otmregistration.BankSelectionActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:name="com.iPruAMC.ui.common.ChromeTabActivity"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.swp.SwpActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1000B4" android:name="com.iPruAMC.distributortransaction.common.MyClientsSplashActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1000B4" android:name="com.iPruAMC.distributortransaction.kycPending.KycPendingSplash" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.kycPending.KycLinkActivity" android:configChanges="1152" android:hardwareAccelerated="true"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.businesssummary.view.BusinessSummaryActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.purchase.investorpurchase.InvestorPurchaseActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.contactrm.RmContactDetailsActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.investortransaction.portfolio.TermsAndConditionsWebViewActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.distTrnasHistory.DistributorTransactionHistoryActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.distTrnasHistory.filter.DistributorFilterActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.distTrnasHistory.TransactionSelectionActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.opportunityList.OpportunitySublistActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.ifa.opportunityList.OpportunitySublistLinkActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1000B4" android:name="com.iPruAMC.transaction.purchase.PurchaseNFOActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:label="@id/0x7F1000B4" android:name="com.iPruAMC.distributortransaction.updatecontact.UpdateContactActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.transaction.purchase.NavGridActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100DA" android:name="com.iPruAMC.distributortransaction.businesssummary.view.BusinessSummaryDashboardActivity" android:configChanges="1152" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F1100D5" android:name="com.karumi.dexter.DexterActivity"/>
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="com.iPruAMC.crashlyticsinitprovider" android:initOrder="100"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.iPruAMC.lifecycle-process"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.iPruAMC.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    </application>
+</manifest>

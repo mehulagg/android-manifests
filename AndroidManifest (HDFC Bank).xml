@@ -1,0 +1,402 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="133" android:versionName="11.1.0" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.snapwork.hdfc" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="true"/>
+    <uses-feature android:name="android.hardware.fingerprint" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.portrait"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <queries>
+        <package android:name="com.snapwork.hdfcsec"/>
+        <package android:name="com.enstage.wibmo.hdfc"/>
+    </queries>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+    </queries>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.webkit.PermissionRequest"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <uses-feature android:name="android.hardware.microphone"/>
+    <application android:theme="@id/0x7F12000F" android:label="@id/0x7F110059" android:icon="@id/0x7F0E0001" android:name="com.hdfc.retail.netbanking.HDFCBaseApplication" android:allowBackup="false" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="true" android:fullBackupContent="@id/0x7F140003" android:usesCleartextTraffic="true" android:networkSecurityConfig="@id/0x7F140004" android:roundIcon="@id/0x7F0E0001" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="true"/>
+        <service android:name="m.z1.push.PNBuilder" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+        <service android:name="com.hdfc.retail.netbanking.watch.communication.WatchListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <action android:name="com.google.android.gms.wearable.CAPABILITY_CHANGED"/>
+                <data android:scheme="wear" android:host="*" android:pathPrefix="/Watch"/>
+            </intent-filter>
+        </service>
+        <service android:name="m.z1.GeofenceTransitionsIntentService"/>
+        <service android:name="com.hdfc.retail.netbanking.wearCalls.UserTokenService"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@id/0x7F110185"/>
+        <activity android:theme="@id/0x7F120110" android:name="com.morfeus.android.websdk.ui.ChatActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <meta-data android:name="com.facebook.accountkit.ApplicationName" android:value="@id/0x7F110059"/>
+        <meta-data android:name="com.facebook.accountkit.ClientToken" android:value="@id/0x7F110000"/>
+        <activity android:theme="@id/0x7F120015" android:label="@id/0x7F110059" android:name="com.hdfc.retail.netbanking.HDFCBank" android:exported="true" android:screenOrientation="5" android:configChanges="1184">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <meta-data android:name="android.app.shortcuts" android:resource="@id/0x7F140000"/>
+            <intent-filter>
+                <data android:scheme="hdfcnewbb" android:host="com.hdfc.retail.netbanking"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="https" android:host="netbanking.hdfcbank.com" android:path="/netbanking"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="https" android:host="netbanking.hdfcbank.com" android:path="/netbanking"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="https" android:host="sao.hdfcbank.com" android:path="/meap/referencecode.html"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.hdfc.retail.netbanking.IntentRegistrationActivity" android:enabled="false" android:targetActivity="com.hdfc.retail.netbanking.HDFCBank">
+            <intent-filter android:label="@id/0x7F110059">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="upi" android:host="pay"/>
+            </intent-filter>
+        </activity-alias>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.tcshdfc.stylingandroid.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140006"/>
+        </provider>
+        <provider android:name="com.hdfc.retail.netbanking.utils.PhotoProvider" android:exported="false" android:authorities="com.tcshdfc.PhotoProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140006"/>
+        </provider>
+        <provider android:name="com.snapwork.hdfcbank.SelfieSdk.CameraFileProvider" android:exported="false" android:authorities="com.snapwork.hdfcbank.SelfieSdk.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140007"/>
+        </provider>
+        <activity android:name="com.hdfc.retail.netbanking.DrawerActivity" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <activity android:name="com.hdfc.retail.netbanking.ActivityWelcome" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <activity android:name="com.hdfc.retail.netbanking.mpassbook.MPBookDrawerActivity" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <activity android:name="com.hdfc.retail.netbanking.CheckFingerprintId" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <activity android:label="@id/0x7F110059" android:name="com.hdfc.retail.netbanking.LoginActivity" android:exported="true" android:screenOrientation="5" android:configChanges="1184">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="z1hdfctcs" android:host="launchlink"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1201D3" android:name="com.hdfc.retail.netbanking.ChangePasswordActivity" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F1201D3" android:name="com.hdfc.retail.netbanking.ChangeQAPActivity" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <activity android:name="com.hdfc.retail.netbanking.ImageCropActivity" android:screenOrientation="5"/>
+        <activity android:name="m.z1.widget.Container" android:screenOrientation="5" android:configChanges="1184">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="z1hdfctcs" android:host="pushEvent"/>
+                <data android:scheme="z1hdfctcs" android:host="close"/>
+                <data android:scheme="z1hdfctcs" android:host="interactedWithPush"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F1201D3" android:name="com.hdfc.retail.netbanking.BlankActivity" android:exported="false" android:screenOrientation="5" android:configChanges="1184"/>
+        <meta-data android:name="z1.deeplink.scheme" android:value="z1hdfctcs"/>
+        <meta-data android:name="z1.apikey" android:value="hdfc2@0a7c3ff3-db5b-4ab8-b6f4-04c70ef556e2"/>
+        <meta-data android:name="z1.push.icon" android:resource="@id/0x7F0E0006"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0A0011"/>
+        <service android:name="com.hdfc.retail.netbanking.services.OnClearRecentApp" android:exported="false" android:stopWithTask="false"/>
+        <service android:name="com.hdfc.retail.netbanking.services.IsAliveService" android:exported="false"/>
+        <activity android:label="@id/0x7F110059" android:name="com.hdfc.retail.netbanking.upi.UpiDrawerActivity" android:exported="false" android:screenOrientation="5" android:configChanges="160" android:windowSoftInputMode="16" android:autoRemoveFromRecents="true"/>
+        <provider android:name="com.hdfc.retail.netbanking.mpassbook.Database.MPassBookProvider" android:exported="false" android:authorities="com.tcshdfc.mpassbook.provider"/>
+        <service android:name="com.hdfc.retail.netbanking.wearCalls.SetIsWatchPairedService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.hdfc.retail.netbanking.wearCalls.SetIsWatchPairedJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.hdfc.retail.netbanking.wearCalls.UserTokenJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.hdfc.retail.netbanking.wearCalls.LogoutJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.services.CLRemoteService"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x7F120001" android:label="@id/0x7F110059" android:name="org.npci.upi.security.pinactivitycomponent.GetCredential" android:exported="false" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.pinactivitycomponent.GetCredential"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="true" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.hdfc.retail.netbanking.services.HDFCFirebaseMessagingService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@id/0x7F0E0006"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@id/0x7F0600E1"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="@id/0x7F11010D"/>
+        <receiver android:name="com.hdfc.retail.netbanking.IncomingSms" android:permission="android.permission.BROADCAST_SMS" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.hdfc.retail.netbanking.services.SMSIntentService" android:exported="true"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAjyoNep7A0wLLV_OlY3B9zQT_fkLbgW5U"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.SmartbuyHomeActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.BookingListActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.CalendarActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.CardsPaymentActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.CategoryLandingActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.CityListing" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.CompareAndShopActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.EMIPaymentActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightDetails" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightIntRoundTripList" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightOneWayList" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightOrderDetailsActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightRoundTripList" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightTravellerDetails" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.FlightTravellerSummary" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.HomeActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.HotelDetails" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.HotelListing" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.HotelOrderDetailsActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.HotelReview" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.HotelRoomDetails" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.ImageFullView" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.ItemsListActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.MensClothingActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.MerchantRedirectActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.MobileSignInActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.NetBankingActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.OfferCheckActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.Payment" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.PaymentOptionsActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.PaymentWebViewActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.ProductDetailsActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.SearchFilterActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.ShoppingFiltersActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.ShoppingSearchResult" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.SignupActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.SignupOTPVerificationActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:name="com.reward360.smartbuylibrary.activity.SmartBuyProfileActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.SubCategoryActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.Terms_Policy" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.TravelActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.UpdatedSubCategoryActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.WebActivity" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120241" android:label="@id/0x7F1103E1" android:name="com.enstage.wibmo.sdk.inapp.InAppInitActivity" android:excludeFromRecents="true" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120241" android:label="@id/0x7F1103E1" android:name="com.enstage.wibmo.sdk.inapp.InAppBrowserActivity" android:excludeFromRecents="true" android:screenOrientation="1" android:configChanges="1168" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120110" android:name="com.morfeus.android.websdk.ui.AppBrowserActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1201D3" android:label="@id/0x7F11003A" android:name="com.snapwork.hdfcbank.SelfieSdk.LauncherActivity" android:launchMode="1" android:configChanges="4020" android:windowSoftInputMode="16"/>
+        <activity android:name="com.snapwork.hdfcbank.SelfieSdk.CameraViewActivity"/>
+        <activity android:theme="@id/0x7F12000C" android:name="com.snapwork.hdfcbank.SelfieSdk.SimpleScannerActivity" android:exported="true"/>
+        <activity android:theme="@id/0x7F120011" android:name="com.lib.libshadeview.CameraViewActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12011A" android:name="com.yanzhenjie.permission.PermissionActivity" android:launchMode="0" android:configChanges="1184" android:windowSoftInputMode="3"/>
+        <provider android:name="com.yanzhenjie.permission.FileProvider" android:exported="false" android:authorities="com.snapwork.hdfc.file.path.share" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F140005"/>
+        </provider>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.DCEMI.DCEMI2MakePaymentActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.SmartBuyHomeActivityForPZ" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.profile.savedCardsSection.ManageSavedCardsActivity" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F1201C8" android:name="com.reward360.smartbuylibrary.activity.SmartBuyInitializationActivity"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.SmartBuyConsentActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.savedCards.SavedCardsActivity" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.TrainConfirmationActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.payment.flexipay.FlexipayMakePaymentActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1201C8" android:name="com.reward360.smartbuylibrary.activity.payment.fare.DisplayFareBreakupActivity"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.payment.flexipay.FlexipayCardVerificationActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.payment.flexipay.FlexipayPaymentActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.BookingStatusActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.payment.DCEMI.DCEMIMakePaymentActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.payment.DCEMI.DCEMICardVerificationActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.irctc.view.trainOrderDetail.TrainCancelledOrderDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.profile.EditSmartBuyProfileActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.CCEMI.EMIPaymentActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.DCEMI.DCEMIPaymentActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.activity.profile.SmartBuyProfileActivity" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.cancel.BookingHistoryActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.cancel.BookingModifiedActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.cancel.CancelTicketActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.busDetail.CancellationAndRefundActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.traveller.ReviewItineraryActivity" android:screenOrientation="1" android:windowSoftInputMode="34"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.payment.BookingConfirmActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.redbus.view.traveller.TravelUserActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.redbus.view.filter.FilterActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.traveller.TravellerActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.boarding.OnBoardingActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="34a3538c4de1e0a45e094529f69a20a56814e18f"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightOneWayList" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightRoundTripList" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightIntRoundTripList" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.hotels.HotelListing" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightDetails" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightTravellerDetails" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightTravellerSummary" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.hotels.HotelDetails" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.hotels.HotelRoomDetails" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.hotels.HotelReview" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.paymentOptions.PaymentOptionsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.paymentOptions.PaymentOptionsWithBackendApiActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.cardsPayment.CardsPaymentActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.testPg.TestPGActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.payment.netBanking.NetBankingActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.home.RedBusHomeActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.cityList.CityListActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.calendar.RedbusCalendarActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.busList.BusListActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.busDetail.BusDetailActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F12012C" android:name="com.reward360.smartbuylibrary.redbus.view.coupon.CouponActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.flights.FlightOrderDetailsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.activity.hotels.HotelOrderDetailsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.home.IRCTCHomeActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.stationList.CityListActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.calendar.IRCTCCalendarActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.trainList.TrainListActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.traveller.IRCTCTravellerActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.countryList.CountryListActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.filter.IRCTCFilterActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.TrainOrderList.TrainOrderListActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.BoardingStationList.BoardingStationListActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.register.IRCTCEmailAndSmsVerifyActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.trainList.TrainRoutesAndSchedulesActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.cancel.IRCTCCancelTicketModifiedActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.cancel.IRCTCCancelTicketActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.register.IRCTCResetPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.register.IRCTCForgotUserIDActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.register.IRCTCForgotPasswordActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.register.IRCTCRegisterActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.trainOrderDetail.TrainOrderDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.reviewItineary.IRCTCReviewItinearyActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.trainList.TrainAvailbilityDescriptionActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.home.IRCTCPNRStatusDetails" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F120114" android:name="com.reward360.smartbuylibrary.irctc.view.coupon.IRCTCCouponActivity" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <service android:name="com.reward360.smartbuylibrary.services.OperatingAirlineIntentService"/>
+        <activity android:theme="@id/0x7F120308" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:clearTaskOnLaunch="true" android:stateNotNeeded="true" android:screenOrientation="6" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.firebase.auth.internal.GenericIdpActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="genericidp" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x01030010" android:name="com.google.firebase.auth.internal.RecaptchaActivity" android:exported="true" android:excludeFromRecents="true" android:launchMode="2">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="recaptcha" android:host="firebase.auth" android:path="/"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.auth.api.gms.service.START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <activity android:theme="@id/0x7F120002" android:name="com.blankj.utilcode.util.UtilsTransActivity4MainProcess" android:configChanges="1184" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F120002" android:name="com.blankj.utilcode.util.UtilsTransActivity" android:multiprocess="true" android:configChanges="1184" android:windowSoftInputMode="3"/>
+        <provider android:name="com.blankj.utilcode.util.UtilsFileProvider" android:exported="false" android:authorities="com.snapwork.hdfc.utilcode.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F14000F"/>
+        </provider>
+        <service android:name="com.blankj.utilcode.util.MessengerUtils$ServerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.snapwork.hdfc.messenger"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.worklight.wlclient.ui.UIActivity"/>
+        <activity android:theme="@id/0x7F1201D3" android:label="@id/0x7F110059" android:name="cordova.plugin.externalurlmanager.URLLoaderActivity" android:launchMode="2" android:screenOrientation="1" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F120101" android:name="cordova.plugin.awesomewebview.AwesomeWebViewActivity" android:screenOrientation="4" android:hardwareAccelerated="true" android:usesCleartextTraffic="true"/>
+        <activity android:theme="@id/0x7F1201D3" android:name="cordova.plugin.permissionplugin.BaseActivity"/>
+        <activity android:theme="@id/0x7F1201D3" android:name="com.cordova.plugin.otpreader.BaseActivity"/>
+        <activity android:theme="@id/0x7F1201D3" android:name="com.cordova.plugin.cameraplugin.BaseActivity"/>
+        <activity android:theme="@id/0x7F120056" android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.snapwork.hdfc.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.snapwork.hdfc.lifecycle-process"/>
+    </application>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+</manifest>

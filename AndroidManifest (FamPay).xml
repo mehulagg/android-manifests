@@ -1,0 +1,366 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="274" android:versionName="1.7.4" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.fampay.in" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="22" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <queries>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO"/>
+            <data android:scheme="smsto" android:host="*"/>
+        </intent>
+        <package android:name="com.google.android.apps.nbu.paisa.user"/>
+        <package android:name="in.org.npci.upiapp"/>
+        <package android:name="com.phonepe.app"/>
+        <package android:name="com.myairtelapp"/>
+        <package android:name="com.myairtelapp.debug"/>
+        <package android:name="com.csam.icici.bank.imobile"/>
+        <package android:name="net.one97.paytm"/>
+        <package android:name="com.sbi.upi"/>
+        <package android:name="com.upi.axispay"/>
+        <package android:name="com.samsung.android.spaymini"/>
+        <package android:name="com.samsung.android.spay"/>
+        <package android:name="com.snapwork.hdfc"/>
+        <package android:name="com.fss.pnbpsp"/>
+        <package android:name="com.icicibank.pockets"/>
+        <package android:name="com.bankofbaroda.upi"/>
+        <package android:name="com.freecharge.android"/>
+        <package android:name="com.fss.unbipsp"/>
+        <package android:name="com.axis.mobile"/>
+        <package android:name="com.mycompany.kvb"/>
+        <package android:name="com.fss.vijayapsp"/>
+        <package android:name="com.dena.upi.gui"/>
+        <package android:name="com.fss.jnkpsp"/>
+        <package android:name="com.olive.kotak.upi"/>
+        <package android:name="com.enstage.wibmo.hdfc"/>
+        <package android:name="com.bsb.hike"/>
+        <package android:name="com.fss.idfcpsp"/>
+        <package android:name="com.YesBank"/>
+        <package android:name="com.abipbl.upi"/>
+        <package android:name="com.microsoft.mobile.polymer"/>
+        <package android:name="com.finopaytech.bpayfino"/>
+        <package android:name="com.mgs.obcbank"/>
+        <package android:name="com.upi.federalbank.org.lotza"/>
+        <package android:name="com.mgs.induspsp"/>
+        <package android:name="ai.wizely.android"/>
+        <package android:name="com.olive.dcb.upi"/>
+        <package android:name="com.mgs.yesmerchantnative.prod"/>
+        <package android:name="in.amazon.mShop.android.shopping"/>
+        <intent>
+            <action android:name="android.intent.action.SEND"/>
+        </intent>
+    </queries>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="true"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <application android:theme="@id/0x7F130011" android:label="@id/0x7F12002D" android:icon="@id/0x7F0F0000" android:name="com.fampay.in.App" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:fullBackupContent="@id/0x7F160000" android:roundIcon="@id/0x7F0F0001" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.fampay.in" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F160004"/>
+        </provider>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.profile_social.SocialProfileActivity" android:screenOrientation="1">
+            <intent-filter android:icon="@id/0x7F08028B">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.com.fampay.in.profile"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.create_ticket.CreateTicketActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.checkout.payment_processing.PaymentProcessingActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.card_secondary.SecondaryCardsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.stories.StoriesActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.alert_settings.AlertSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.minor_sign_up.MinorSignUpFlowActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment_initiate.GetMoneyActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment_initiate.PaymentInitiateActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.app_settings.AppSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.account_details.AccountDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.card.MyCardActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.qr_scanner.PaymentQRScannerActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.hcc_screen.HccScreen" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.fam_join_requests.FamJoinRequestsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.fam_join_timer.FamJoinTimerActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.location_wall.LocationWallActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.accept_payment.AcceptPaymentActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_card_activate_success.CardActivateSuccessActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.video.VideoActivity" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.kyc.KycVerifyDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.camera.CameraActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.upi_settings.UpiSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.upi_onboarding.UpiOnboardingActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.rewards.RewardsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.savings_challenge.SavingsChallengeActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.transaction_limit.TransactionLimitActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.card_transaction_settings.CardTxnSettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_card_activate.CardActivateActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.webview.WebviewActivity" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.request_invite.RequestOrSendInviteActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_track.OrderTrackActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_track.OrderTrackActivityV2" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_details.OrderDetailsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_card_details.OrderCardDetailsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.location_seletecter.LocationSelectorActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment_settings.PaymentSettingActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.privacy_settings.PrivacySettingsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.fam_onboarding.OnboardingFamActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.faqs.FaqActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.request_details.RequestDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.share_edit_feed.ShareEditFeedActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment.withdraw_to_bank.AddNewBankActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment.withdraw_to_bank.WithdrawCheckoutActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.upi_input.UpiInputActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.order_card.CardOrderInAppActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.change_pin.ChangePINActivity" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.checkout.AddNewCardActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.checkout.CheckoutActivity" android:screenOrientation="1" android:windowSoftInputMode="48"/>
+        <activity android:theme="@id/0x7F130264" android:name="com.fampay.in.deeplink.DeepLinkActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fp" android:host="fampay.in"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="fam.one"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="fam.one"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="upi" android:host="pay"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.all_connections.AllConnectionsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.fam_members.FamAllMembersActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.all_invites.AllInvitesActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.feed_actions_card.FeedActionsCardCompositeActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.location_picker.LocationPickerBySearch" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.transaction_details.TransactionDetailsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment.withdraw_or_request_from_fam.WithdrawOrRequestFromFam" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.notifications.NotificationsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.fam_edit.FamEditActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment.payment_compose.PaymentComposeActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment.add_money_to_wallet.AddMoneyToWalletActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.payment.request_money_upi_collect.RequestMoneyUpiCollect" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.bank.BankActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.edit_profile.EditProfileActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.mutual_transactions.MutualTransactionsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.transactions.AllTransactionsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.card_preferences.CardPreferencesActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.profile_my.ProfileActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.feed.FeedActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.fam.FamActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.kyc.KYCActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.complete_onboarding.CompleteOnboardingActivity" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.home.HomeActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.create_fam.CreateFamActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.login.LoginActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.onboarding.OnboardingActivity" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.pocket_money.view.PocketMoneyActivity" android:screenOrientation="1" android:windowSoftInputMode="19"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.pocket_money.view.PocketMoneySettingsActivity" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130267" android:name="com.fampay.in.ui.social_integrations.view.SocialIntegrationsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130127" android:name="com.fampay.in.ui.splash.SplashActivity" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <receiver android:name="com.appsflyer.SingleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fampay.in.services.SMSBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.fampay.in.services.ApplicationSelectorReceiver"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@id/0x7F1200CB"/>
+        <meta-data android:name="com.facebook.sdk.CodelessDebugLogEnabled" android:value="true"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@id/0x7F12015D"/>
+        <meta-data android:name="com.mixpanel.android.MPConfig.UseIpAddressForGeolocation" android:value="false"/>
+        <service android:name="com.fampay.in.services.FCMService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.fampay.in.auth.AuthenticatorService" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@id/0x7F160001"/>
+        </service>
+        <service android:name="com.fampay.in.auth.SyncService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@id/0x7F16000D"/>
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@id/0x7F160003"/>
+        </service>
+        <activity android:theme="@id/0x7F1303A1" android:label="" android:name="in.zeta.apollo.sso.signupview.SignUpWebViewActivity" android:launchMode="1" android:screenOrientation="1" android:configChanges="160" android:windowSoftInputMode="3"/>
+        <activity android:theme="@id/0x7F130109" android:name="in.apollo.android.ui.activity.GenericDrawerLayoutActivity" android:screenOrientation="1"/>
+        <activity android:name="in.apollo.android.ui.activity.CustomCameraActivity" android:launchMode="2"/>
+        <activity android:label="" android:name="in.apollo.android.ui.activity.GenericWebViewActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.ChannelListActivity"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.ConversationDetailActivity" android:configChanges="1152" android:windowSoftInputMode="2"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.DeeplinkInterstitialActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.PictureAttachmentActivity" android:configChanges="1152" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.CategoryListActivity"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.ArticleListActivity" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1301FF" android:name="com.freshchat.consumer.sdk.activity.ArticleDetailActivity"/>
+        <activity android:theme="@id/0x7F1301E0" android:name="com.freshchat.consumer.sdk.activity.InterstitialActivity" android:configChanges="1152"/>
+        <service android:name="com.freshchat.consumer.sdk.service.FreshchatService"/>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.freshchat.consumer.sdk.receiver.FreshchatNetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.freshchat.consumer.sdk.provider.FreshchatInitProvider" android:enabled="true" android:exported="false" android:multiprocess="true" android:authorities="com.fampay.in.freshchat.initprovider"/>
+        <receiver android:name="in.zeta.apollo.notification.NotificationActionReceiver"/>
+        <receiver android:name="in.zeta.android.commons.network.NetworkStateReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@id/0x7F1201C7" android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"/>
+        <activity android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"/>
+        <activity android:theme="@id/0x7F13012E" android:label="@id/0x7F1201E1" android:name="com.google.android.libraries.places.widget.AutocompleteActivity" android:exported="false" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F1303A7" android:name="com.facebook.FacebookActivity" android:configChanges="1456"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="fbconnect" android:host="cct.com.fampay.in"/>
+            </intent-filter>
+        </activity>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.dynamiclinks.internal.FirebaseDynamicLinkRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <receiver android:name="com.smartlook.sdk.smartlook.core.referrer.ReferrerReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.smartlook.sdk.smartlook.job.worker.record.UploadRecordJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.fampay.in.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B0012"/>
+        <activity android:theme="@id/0x7F1301F4" android:name="com.gocashfree.cashfreesdk.CFPaymentActivity"/>
+        <activity android:name="com.gocashfree.cashfreesdk.CFUPIPaymentActivity"/>
+        <activity android:theme="@id/0x7F1301F4" android:name="com.gocashfree.cashfreesdk.AmazonPayActivity"/>
+        <activity android:theme="@id/0x7F1301F6" android:name="com.gocashfree.cashfreesdk.GooglePayActivity"/>
+        <activity android:theme="@id/0x7F1301F6" android:name="com.gocashfree.cashfreesdk.CFPhonePayActivity"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="com.fampay.in.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.webengage.sdk.android.ExecutorService"/>
+        <service android:name="com.webengage.sdk.android.EventLogService"/>
+        <service android:name="com.webengage.sdk.android.NotificationClickHandlerService">
+            <intent-filter>
+                <action android:name="com.webengage.sdk.android.intent.ACTION"/>
+                <category android:name="com.fampay.in"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x0103000F" android:name="com.webengage.sdk.android.actions.render.WebEngageActivity" android:configChanges="1152"/>
+        <receiver android:name="com.webengage.sdk.android.WebEngageReceiver">
+            <intent-filter>
+                <action android:name="com.webengage.sdk.android.intent.ACTION"/>
+                <category android:name="com.fampay.in"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.webengage.sdk.android.WebEngageJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.fampay.in.lifecycle-process"/>
+        <activity android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity" android:enabled="false" android:exported="false" android:process=":playcore_missing_splits_activity" android:stateNotNeeded="true" android:launchMode="3"/>
+        <activity android:theme="@id/0x7F130231" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:enabled="false" android:exported="false" android:stateNotNeeded="true"/>
+        <service android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService" android:enabled="false" android:exported="true">
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="11000"/>
+        </service>
+        <service android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService" android:enabled="false" android:exported="false"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <activity android:name="com.mixpanel.android.mpmetrics.MixpanelNotificationRouteActivity"/>
+        <receiver android:name="com.mixpanel.android.mpmetrics.MixpanelPushNotificationDismissedReceiver"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

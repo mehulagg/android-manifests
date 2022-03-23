@@ -1,0 +1,373 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="12747" android:versionName="1.50.0" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="tv.accedo.airtel.wynk" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <permission android:name="tv.accedo.airtel.wynk.permission.MIPUSH_RECEIVE" android:protectionLevel="2"/>
+    <uses-permission android:name="tv.accedo.airtel.wynk.permission.MIPUSH_RECEIVE"/>
+    <queries>
+        <intent>
+            <action android:name="android.speech.action.RECOGNIZE_SPEECH"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+    </queries>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <queries>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="https"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:scheme="http"/>
+        </intent>
+    </queries>
+    <application android:theme="@id/0x7F140010" android:label="@id/0x7F1300E1" android:icon="@id/0x7F0F0000" android:name="tv.accedo.wynk.android.airtel.WynkApplication" android:allowBackup="true" android:hardwareAccelerated="true" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="false" android:fullBackupContent="@id/0x7F160000" android:networkSecurityConfig="@id/0x7F160004" android:roundIcon="@id/0x7F0F0000" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:isSplitRequired="true" android:localeConfig="@id/0x7F16000F">
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="ce7c80264a9c4c50d5033b1aecb4ea9fd9a3ae81"/>
+        <meta-data android:name="io.branch.sdk.BranchKey" android:value="key_live_kc5hbJYeDTvc99K81cvQrfbkzrbvQtEW"/>
+        <meta-data android:name="io.branch.sdk.BranchKey.test" android:value="key_test_pgZfbR1czLvn25MY3jFKmejbACgrSztR"/>
+        <meta-data android:name="io.branch.sdk.TestMode" android:value="false"/>
+        <service android:name="com.xiaomi.push.service.XMPushService" android:enabled="true" android:process=":pushservice"/>
+        <service android:name="com.xiaomi.push.service.XMJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" android:process=":pushservice"/>
+        <service android:name="com.xiaomi.mipush.sdk.PushMessageHandler" android:enabled="true" android:exported="true"/>
+        <service android:name="com.xiaomi.mipush.sdk.MessageHandleService" android:enabled="true"/>
+        <receiver android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.xiaomi.push.service.receivers.PingReceiver" android:exported="false" android:process=":pushservice">
+            <intent-filter>
+                <action android:name="com.xiaomi.push.PING_TIMER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.moengage.mi.MoEMiPushReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.MESSAGE_ARRIVED"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.xiaomi.mipush.ERROR"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.google.android.gms.cast.framework.OPTIONS_PROVIDER_CLASS_NAME" android:value="tv.accedo.wynk.android.airtel.playerv2.ChromeCastOptionsProvider"/>
+        <meta-data android:name="com.google.android.gms.ads.AD_MANAGER_APP" android:value="true"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713"/>
+        <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
+        <receiver android:name="com.appsflyer.MultipleInstallBroadcastReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="tv.accedo.wynk.android.airtel.episodereminder.LiveTVReminderReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="tv.accedo.wynk.android.airtel.episodereminder.LiveTVRemindMeLaterReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="tv.accedo.wynk.android.airtel.episodereminder.LiveTVReminderIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="true"/>
+        <service android:name="tv.accedo.airtel.wynk.presentation.listener.MyGcmListenerService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="tv.accedo.wynk.android.airtel.sync.AnalyticsJobService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <activity android:label="@id/0x7F1300E1" android:name="com.moe.pushlibrary.activities.MoEActivity" android:parentActivityName="tv.accedo.wynk.android.airtel.activity.AirtelmainActivity">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value="tv.accedo.wynk.android.airtel.activity.AirtelmainActivity"/>
+        </activity>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.NewsChannelPreferenceActivity" android:screenOrientation="1" android:configChanges="1152"/>
+        <activity android:theme="@id/0x7F1401D8" android:name="tv.accedo.airtel.wynk.presentation.view.activity.SplashActivity" android:screenOrientation="1" android:configChanges="1152">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="https" android:host="airteltv.onelink.me" android:pathPrefix="/4084849162"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@id/0x7F130223"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="tv.accedo.wynk.android.airtel.activity.VoucherWebViewActivity"/>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.AirtelmainActivity" android:exported="true" android:launchMode="2" android:screenOrientation="1" android:configChanges="3456" android:windowSoftInputMode="50" android:parentActivityName="tv.accedo.airtel.wynk.presentation.view.activity.SplashActivity" android:supportsPictureInPicture="true">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".presentation.view.activity.SplashActivity"/>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable" android:resource="@id/0x7F160007"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@id/0x7F130419" android:host="@id/0x7F13009D"/>
+                <data android:scheme="@id/0x7F130419" android:host="@id/0x7F13009E"/>
+                <data android:scheme="@id/0x7F130419" android:host="@id/0x7F13009F"/>
+                <data android:scheme="@id/0x7F130419" android:host="@id/0x7F1300A3"/>
+                <data android:scheme="@id/0x7F130419" android:host="@id/0x7F1300A0"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.AirtelSignInActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.AirtelVerifyPin" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.AboutActivity" android:screenOrientation="1"/>
+        <service android:name="tv.accedo.wynk.android.airtel.sync.AuthenticatorService" android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@id/0x7F160001"/>
+        </service>
+        <provider android:name="tv.accedo.wynk.android.airtel.sync.StubProvider" android:exported="true" android:authorities="tv.accedo.airtel.wynk.provider" android:syncable="true"/>
+        <service android:name="tv.accedo.wynk.android.airtel.sync.SyncService" android:exported="false">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@id/0x7F16000D"/>
+        </service>
+        <activity android:name="tv.accedo.wynk.android.airtel.activity.PostPaymentActivity" android:screenOrientation="1"/>
+        <receiver android:name="tv.accedo.wynk.android.airtel.data.manager.UpdateNotifyManager">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package" android:path="tv.accedo.airtel.wynk"/>
+            </intent-filter>
+        </receiver>
+        <activity android:label="@id/0x7F130791" android:name="tv.accedo.wynk.android.airtel.activity.DialogActivity"/>
+        <activity android:name="tv.accedo.wynk.android.airtel.activity.base.BaseFragmentActivity"/>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.GenericWebViewActivity" android:screenOrientation="1" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.BasicWebViewActivity" android:screenOrientation="1" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F140016" android:name="tv.accedo.wynk.android.airtel.activity.PeopleDetailActivity" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F140265" android:name="tv.accedo.airtel.wynk.presentation.modules.detail.PlaygroundActivity" android:screenOrientation="1" android:configChanges="1184"/>
+        <receiver android:name="tv.accedo.wynk.android.airtel.data.helper.NotificationDismissBroadcastReceiver" android:exported="false"/>
+        <receiver android:name="tv.accedo.airtel.wynk.presentation.scheduler.NotificationPublisher"/>
+        <receiver android:name="tv.accedo.wynk.android.airtel.util.ReminderBroadcastReceiver"/>
+        <provider android:name="tv.accedo.wynk.android.airtel.util.constants.GenericFileProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.my.package.name.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F160005"/>
+        </provider>
+        <activity android:theme="@id/0x7F140265" android:name="tv.accedo.wynk.android.airtel.activity.WebViewPlayerActivity" android:screenOrientation="1"/>
+        <activity android:name="tv.accedo.wynk.android.airtel.activity.PlayerDetailActivity"/>
+        <activity android:name="tv.accedo.wynk.android.airtel.activity.FirebaseKeySelectionActivity"/>
+        <activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="1184" android:hardwareAccelerated="true"/>
+        <activity android:theme="@id/0x7F140010" android:name="tv.accedo.wynk.android.airtel.activity.dth.SelfCareWebView"/>
+        <receiver android:name="tv.accedo.wynk.android.airtel.components.receiver.ApplicationSelectorReceiver"/>
+        <service android:name="tv.accedo.wynk.android.blocks.service.download.AppDownloadService" android:enabled="true" android:exported="false" android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.android.exoplayer.downloadService.action.INIT"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.android.exoplayer2.scheduler.PlatformScheduler$PlatformSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+        <meta-data android:name="firebase_performance_collection_enabled" android:value="false"/>
+        <activity android:theme="@id/0x7F14012A" android:name="tv.airtel.companion.view.CompanionMainActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F14026C" android:name="tv.airtel.companion.view.ui.plans.WebViewActivity" android:screenOrientation="1" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F14012A" android:label="@id/0x7F130792" android:name="tv.airtel.remote.RemoteTvActivity" android:screenOrientation="1"/>
+        <receiver android:name="com.google.android.exoplayer2.offline.BootReceiver" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON"/>
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.wynk.atvdownloader.util.DownloadNotificationBroadcastReciever" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="xstream.intent.action.DOWNLOAD_NOTIF"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="com.xstream.ads.video.AudioInterstitialActivity"/>
+        <activity android:theme="@id/0x7F140182" android:name="com.mopub.mobileads.MoPubFullscreenActivity" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F140182" android:name="com.mopub.common.MoPubBrowser" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F140182" android:name="com.mopub.mobileads.MraidVideoPlayerActivity" android:configChanges="1184"/>
+        <activity android:theme="@id/0x7F140182" android:name="com.mopub.common.privacy.ConsentDialogActivity" android:configChanges="1184"/>
+        <activity android:theme="@id/0x0103000F" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="4016"/>
+        <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.mobileadsinitprovider" android:initOrder="100"/>
+        <service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="tv.accedo.airtel.wynk.workmanager-init" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050006" android:exported="true" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.foreground.SystemForegroundService" android:enabled="@id/0x7F050005" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver" android:permission="android.permission.DUMP" android:enabled="true" android:exported="true" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="saschpe.android.customtabs.WebViewActivity" android:screenOrientation="1"/>
+        <meta-data android:name="android.webkit.WebView.MetricsOptOut" android:value="true"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <receiver android:name="com.google.android.gms.cast.framework.media.MediaIntentReceiver" android:exported="false"/>
+        <service android:name="com.google.android.gms.cast.framework.media.MediaNotificationService" android:exported="false"/>
+        <service android:name="com.google.android.gms.cast.framework.ReconnectionService" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <service android:name="com.moengage.richnotification.MoERichPushIntentService" android:exported="false"/>
+        <provider android:name="com.readystatesoftware.chuck.internal.data.ChuckContentProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.chuck.provider"/>
+        <activity android:theme="@id/0x7F140127" android:label="@id/0x7F1301B6" android:name="com.readystatesoftware.chuck.internal.ui.MainActivity" android:taskAffinity="com.readystatesoftware.chuck.task" android:launchMode="2"/>
+        <activity android:theme="@id/0x7F140127" android:name="com.readystatesoftware.chuck.internal.ui.TransactionActivity" android:parentActivityName="com.readystatesoftware.chuck.internal.ui.MainActivity"/>
+        <service android:name="com.readystatesoftware.chuck.internal.support.ClearTransactionsService" android:exported="false"/>
+        <provider android:name="com.google.firebase.perf.provider.FirebasePerfProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.firebaseperfprovider" android:initOrder="101"/>
+        <service android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@id/0x7F1401D6" android:name="com.erkutaras.showcaseview.ShowcaseActivity"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B000F"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="tv.accedo.airtel.wynk.lifecycle-process"/>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.com.squareup.picasso"/>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <activity android:theme="@id/0x7F14029F" android:name="com.xstream.ads.banner.internal.viewLayer.interstitial.InterstitialActivity" android:launchMode="1" android:noHistory="true"/>
+        <activity android:theme="@id/0x7F14029F" android:name="com.xstream.ads.banner.internal.viewLayer.interstitial.InterstitialNotifyActivity"/>
+        <service android:name="com.moe.pushlibrary.MoEWorker" android:exported="false"/>
+        <provider android:name="com.moe.pushlibrary.providers.MoEProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.moengage.provider"/>
+        <receiver android:name="com.moengage.core.MoEAlarmReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.moengage.core.DataSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.moengage.pushbase.MoEPushReceiver" android:exported="false"/>
+        <activity android:theme="@id/0x01030011" android:name="com.moengage.pushbase.activities.PushTracker" android:configChanges="1152" android:noHistory="true"/>
+        <activity android:theme="@id/0x01030011" android:name="com.moengage.pushbase.activities.PushClickDialogTracker" android:taskAffinity=":NotificationDialog" android:excludeFromRecents="true" android:launchMode="2" android:configChanges="1152"/>
+        <service android:name="com.moengage.pushbase.push.MoEPushWorker" android:exported="false"/>
+        <receiver android:name="com.moengage.geofence.GeoFenceBroadcastReceiver" android:exported="false"/>
+        <service android:name="com.moengage.geofence.GeofenceJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.moengage.geofence.CampaignSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.moengage.geofence.CampaignSyncAlarm" android:enabled="true" android:exported="false"/>
+        <service android:name="com.moengage.geofence.LocationIntentService" android:exported="false"/>
+        <receiver android:name="com.moengage.pushamp.PushAmpAlarmReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.moengage.pushamp.PushAmpIntentService" android:exported="false"/>
+        <service android:name="com.moengage.pushamp.PushAmpSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.moengage.addon.trigger.DTIntentService" android:exported="false"/>
+        <service android:name="com.moengage.addon.trigger.DTSyncJob" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name="com.moengage.addon.trigger.DTSyncAlarmReceiver" android:enabled="true" android:exported="false"/>
+        <activity android:name="com.moengage.integrationverifier.IntegrationVerificationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="moengage" android:host="integration"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@id/0x01030006" android:name="com.inmobi.ads.rendering.InMobiAdActivity" android:configChanges="1073745844" android:hardwareAccelerated="true"/>
+        <provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="tv.accedo.airtel.wynk.crashlyticsinitprovider" android:initOrder="100"/>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F16000E"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>

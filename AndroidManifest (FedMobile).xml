@@ -1,0 +1,363 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="85400312" android:versionName="6.4.0" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.fedmobile" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30"/>
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.PICK"/>
+            <data android:mimeType="image/*"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.CHOOSER"/>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+    </queries>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-feature android:name="android.hardware.biometrics" android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-feature android:glEsVersion="131072" android:required="true"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@id/0x7F13000D" android:label="@id/0x7F120148" android:icon="@id/0x7F080306" android:name="in.co.federalbank.federalbank.FederalApplication" android:screenOrientation="1" android:allowBackup="false" android:largeHeap="true" android:supportsRtl="true" android:extractNativeLibs="false" android:usesCleartextTraffic="false" android:networkSecurityConfig="@id/0x7F150004" android:roundIcon="@id/0x7F080309" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:isSplitRequired="true" android:requestLegacyExternalStorage="true">
+        <activity android:name="in.co.federalbank.federalbank.onboarding.NewAccountActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:theme="@id/0x7F130234" android:name="in.co.federalbank.federalbank.SplashScreenActivity" android:screenOrientation="1" android:windowSoftInputMode="16">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.fedmobile.SplashScreenActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="in.co.federalbank.federalbank.insurance.feature.InsuranceLandingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.accountservices.features.viewprofile.ViewProfileActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.WelcomeActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="18">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="federalapp"/>
+            </intent-filter>
+            <intent-filter android:label="@id/0x7F120148">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="upi" android:host="pay"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.DeviceOnboardingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.forex.features.onboard.ForexSplashActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.LandingScreenActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.CreateAccountActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.features.searchpayee.SendMoneyActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.deeplink.DeeplinkHandlerActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.features.MoreActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.WebLinkActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.TermsConditionActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.mfee.ModuleActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.CreateMpinActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.loans.loanaccounts.loandetails.LoanDetailsActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.fedbook.FedBookActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:name="in.co.federalbank.federalbank.investments.InvestmentDetailActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:theme="@id/0x7F130056" android:name="com.theartofdev.edmodo.cropper.CropImageActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.LoginActivity" android:launchMode="1" android:screenOrientation="1" android:windowSoftInputMode="3"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.features.upi.MandateActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="2"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.features.upi.ManageUpiAccountsActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.features.upi.ManageUpiIDsActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.wallet.WalletActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.mutualfunds.moneybloom.MutualFundActivity" android:exported="false" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.billpayment.activity.BillPaymentLandingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:name="in.co.federalbank.federalbank.recharge.activity.RechargeLandingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:name="in.co.federalbank.federalbank.nuclei.payments.NucleiPaymentActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.nuclei.EnterMpinActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.helpandsupport.activity.HelpAndSupportLandingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.UpiSmsVerificationActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.clayfin.ExpenseManagerActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.helpandsupport.activity.RaiseTicketActivity" android:exported="false" android:screenOrientation="1" android:noHistory="true"/>
+        <activity android:name="in.co.federalbank.federalbank.helpandsupport.activity.helpsection.HelpSectionActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.transactions.feature.transactionLandingScreen.TransactionHistoryActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.investments.safegold.SafeGoldLandingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.investments.safegold.SafeGoldPaymentActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.investments.safegold.disclaimer.DisclaimerActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.mutualfunds.moneybloom.disclaimer.MutualFundDisclaimerActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.features.helpandsupportupi.UpiHelpAndSupportActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.features.deviceauthentication.securityquestionformpin.SelfieMpinActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.features.deviceauthentication.accountauthentication.AccountAuthenticationActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.features.deviceauthentication.blockerscreen.MobileNumberRegisterActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.cc_android_wrapper.CCWebViewActivity" android:exported="false" android:launchMode="1" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.cc_android_wrapper.ccpayment.CCPaymentActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.fedbook.feature.FedBookLauncherActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.onboarding.OnBoardingDummyWelcomeActivity" android:exported="false" android:screenOrientation="1"/>
+        <activity android:name="in.co.federalbank.federalbank.marketplace.MarketPlaceLaunchingActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <activity android:name="in.co.federalbank.federalbank.marketplace.MarketPlacePaymentActivity" android:exported="false" android:screenOrientation="1" android:windowSoftInputMode="18"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@id/0x7F0B000B"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyAhd2zJ7TzgFxn5bRwRvGxshndHFApyotk"/>
+        <meta-data android:name="CLEVERTAP_INAPP_EXCLUDE" android:value="SplashScreenActivity "/>
+        <meta-data android:name="CLEVERTAP_BACKGROUND_SYNC" android:value="1"/>
+        <meta-data android:name="CLEVERTAP_NOTIFICATION_ICON" android:value="ic_notification_small"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@id/0x7F08035F"/>
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@id/0x7F060079"/>
+        <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-2905384164042576~8000718290"/>
+        <provider android:name="in.co.federalbank.federalbank.helpandsupport.utilities.FederalFileProvider" android:exported="false" android:authorities="com.fedmobile.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150001"/>
+        </provider>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="com.fedmobile.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150001"/>
+        </provider>
+        <receiver android:name="com.clevertap.android.sdk.pushnotification.CTPushNotificationReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="in.co.federalbank.federalbank.TasWrapper.TasIntentReceiverWrapper" android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.clevertap.android.sdk.pushnotification.CTNotificationIntentService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.PUSH_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="in.co.federalbank.federalbank.services.FederalFirebaseMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.trusteer.taz.service.TasService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:theme="@id/0x7F130123" android:name="com.example.marketplacesdk.views.StatusActivity"/>
+        <activity android:theme="@id/0x7F130123" android:name="com.example.marketplacesdk.views.MerchantActivity"/>
+        <activity android:theme="@id/0x7F130123" android:name="com.example.marketplacesdk.views.LoaderActivity"/>
+        <activity android:theme="@id/0x7F130123" android:label=" " android:name="com.example.marketplacesdk.views.HomeActivity" android:configChanges="512"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.safegold.ui.ImportantInformationGoldPricesActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.DisclaimerActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Add_new_addressActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Add_to_cartActivity$Add__new_delivery_addressActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.BuyGoldActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.PaymentActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.OrderStatusActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.SellGoldActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Order_sell_statusActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Payment_detailsActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.selling_order_checkoutActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Delivery_landingActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Delivery_order_reviewActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.DeliveryOrderStatusActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Add_to_cartActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Product_dtlActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.My_lockerActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Empty_cartActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.Select_addressActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.sg.nuclei.ui.My_order_listActivity" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130234" android:label="@id/0x7F120148" android:name="com.equirus.EquirusActivity" android:configChanges="1200" android:windowSoftInputMode="16"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity android:theme="@id/0x7F130234" android:name="com.yalantis.ucrop.UCropActivity"/>
+        <provider android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider" android:exported="false" android:authorities="com.fedmobile.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150001"/>
+        </provider>
+        <provider android:name="com.RNFetchBlob.Utils.FileProvider" android:exported="false" android:authorities="com.fedmobile.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150007"/>
+        </provider>
+        <service android:name="com.nuclei.fasm.WebResourceDownloadService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:name="com.nuclei.flights.cancellation.view.activity.CancelledTicketStatusActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.flights.cancellation.view.activity.CancellationReasonActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.flights.cancellation.view.activity.CancelTicketConfirmationActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.flights.cancellation.view.activity.SelectPassengerCancelActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.flights.view.activity.FlightListingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="32"/>
+        <activity android:name="com.nuclei.flights.view.activity.FlightLandingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="32" android:autoRemoveFromRecents="true"/>
+        <activity android:name="com.nuclei.flights.view.activity.FlightCalenderActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.flights.view.activity.FlightLocationPickerActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.flights.view.activity.FlightBookingsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.flights.view.activity.FlightETicketActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.flights.view.activity.FlightsDetailsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.flights.view.activity.TravellerDetailsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.flights.view.activity.FlightCartReviewActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.flights.view.activity.CancellationActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.HotelCartReviewActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.HotelBookingsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="34"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.HotelsLandingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.HotelsSummaryActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.HotelListingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="34"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.BookingDetailsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="34"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.hotels.activity.BookingCancelActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:windowSoftInputMode="34"/>
+        <activity android:name="com.nuclei.hotels.hotel_v2.HotelV2LandingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:configChanges="1073758132" android:windowSoftInputMode="16" android:hardwareAccelerated="true"/>
+        <activity android:name="com.nuclei.bus.activity.BusLandingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:configChanges="1073758132" android:windowSoftInputMode="16" android:hardwareAccelerated="true"/>
+        <activity android:name="com.nuclei.bus.flutter_bridge.BusFlutterCoupon" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:configChanges="1073758132" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x7F130014" android:label="@id/0x7F120CF1" android:name="com.nuclei.cabs.activity.CabsLocationPickerActivity" android:taskAffinity="com.fedmobile"/>
+        <activity android:theme="@id/0x7F130236" android:label="@id/0x7F120CF0" android:name="com.nuclei.cabs.activity.CabOAuthActivity" android:taskAffinity="com.fedmobile"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.cabs.activity.CabsLandingActivity" android:taskAffinity="com.fedmobile" android:launchMode="1" android:screenOrientation="1" android:hardwareAccelerated="false" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.cabs.activity.CabsCancelActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:hardwareAccelerated="false"/>
+        <activity android:theme="@id/0x7F13014C" android:name="com.nuclei.fluttercore.activity.FlutterCoreActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:configChanges="1073758132" android:windowSoftInputMode="16" android:hardwareAccelerated="true"/>
+        <activity android:name="com.nuclei.fluttercore.base.calendar_v2.activity.FlutterCalendarActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:configChanges="1073758132" android:windowSoftInputMode="16" android:hardwareAccelerated="true"/>
+        <meta-data android:name="flutterEmbedding" android:value="2"/>
+        <activity android:name="com.nuclei.onboarding.activity.NucleiOnBoardingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.sdk.NuWebViewActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.sdk.LocationPickerActivity"/>
+        <activity android:theme="@id/0x01030055" android:name="com.nuclei.sdk.deeplink.DeeplinkHandlerActivity" android:taskAffinity="com.fedmobile" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x01030055" android:name="com.nuclei.sdk.deeplink.ExternalDeepLinkHandlerActivity" android:taskAffinity="com.fedmobile" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x7F130014" android:label="@id/0x7F120CF2" android:name="com.nuclei.sdk.calendar.activity.CalendarActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.sdk.base.orderdetail.grpc.OrderDetailsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:parentActivityName="com.nuclei.sdk.landing.ui.activity.LandingActivity" android:autoRemoveFromRecents="true">
+            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".landing.ui.activity.LandingActivity"/>
+        </activity>
+        <activity android:name="com.nuclei.sdk.base.orderdetail.legacy.LegacyOrderDetailsActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:theme="@id/0x7F130014" android:name="com.nuclei.sdk.base.mytransaction.grpc.TransactionHistoryActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:autoRemoveFromRecents="true"/>
+        <activity android:name="com.nuclei.sdk.landing.ui.activity.LandingActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:autoRemoveFromRecents="true"/>
+        <activity android:theme="@id/0x7F13014F" android:name="com.nuclei.sdk.landing.ui.activity.SdkLogoutActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1"/>
+        <activity android:name="com.nuclei.sdk.helpsupport.activity.HelpSupportActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:autoRemoveFromRecents="true"/>
+        <activity android:name="com.nuclei.sdk.helpsupport.activity.SupportSectionActivity" android:taskAffinity="com.fedmobile" android:screenOrientation="1" android:autoRemoveFromRecents="true"/>
+        <provider android:name="com.nuclei.sdk.provider.NucleiFileProvider" android:exported="false" android:authorities="com.fedmobile.com.nuclei.sdk.provider.NucleiFileProvider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150005"/>
+        </provider>
+        <activity android:theme="@id/0x7F13000D" android:name="in.onedirect.chatsdk.activity.SplashActivity"/>
+        <activity android:theme="@id/0x7F13000D" android:name="in.onedirect.chatsdk.activity.OpenChatActivity" android:windowSoftInputMode="16"/>
+        <activity android:theme="@id/0x7F13000D" android:name="in.onedirect.chatsdk.activity.PreChatFormActivity"/>
+        <activity android:theme="@id/0x7F13000D" android:name="in.onedirect.chatsdk.activity.TicketListingActivity"/>
+        <activity android:theme="@id/0x7F13000D" android:name="in.onedirect.chatsdk.activity.ClosedChatActivity" android:noHistory="true"/>
+        <service android:name="in.onedirect.chatsdk.notification.NotificationInstanceIdService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="in.onedirect.chatsdk.notification.NotificationMessagingService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.nuclei.notificationcenter.NotificationActionReceiver"/>
+        <activity android:name="com.worldline.in.ipg.PaymentStandard" android:screenOrientation="1" android:configChanges="128" android:noHistory="false"/>
+        <activity android:name="com.worldline.in.ipg.PaymentCardCapture" android:screenOrientation="1" android:configChanges="128" android:noHistory="false"/>
+        <activity android:theme="@id/0x01030010" android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:configChanges="32"/>
+        <activity android:theme="@id/0x7F130223" android:name="com.clevertap.android.sdk.inbox.CTInboxActivity" android:configChanges="32"/>
+        <service android:name="com.clevertap.android.sdk.pushnotification.amp.CTBackgroundIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.BG_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.clevertap.android.sdk.pushnotification.amp.CTBackgroundJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <receiver android:name="in.onedirect.notificationcenter.NotificationActionReceiver"/>
+        <activity android:theme="@id/0x0103000F" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="4016"/>
+        <provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.fedmobile.mobileadsinitprovider" android:initOrder="100"/>
+        <service android:name="com.google.android.gms.ads.AdService" android:enabled="true" android:exported="false"/>
+        <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.fedmobile.workmanager-init" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@id/0x7F050005" android:exported="true" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false" android:directBootAware="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="false" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@id/0x7F050004" android:exported="false" android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="androidx.room.MultiInstanceInvalidationService" android:exported="false" android:directBootAware="true"/>
+        <meta-data android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule" android:value="GlideModule"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="flutterProjectType" android:value="module"/>
+        <activity android:theme="@id/0x01030010" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="com.crazecoder.openfile.FileProvider" android:exported="false" android:authorities="com.fedmobile.fileProvider.com.crazecoder.openfile" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@id/0x7F150002"/>
+        </provider>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.fedmobile.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <activity android:theme="@id/0x01030007" android:name="io.flutter.plugins.urllauncher.WebViewActivity" android:exported="false"/>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="com.fedmobile.lifecycle-process"/>
+        <provider android:name="com.squareup.picasso.PicassoProvider" android:exported="false" android:authorities="com.fedmobile.com.squareup.picasso"/>
+        <activity android:theme="@id/0x7F130000" android:label="@id/0x7F120148" android:name="org.npci.upi.security.pinactivitycomponent.GetCredential" android:exported="false" android:screenOrientation="1">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.pinactivitycomponent.GetCredential"/>
+            </intent-filter>
+        </activity>
+        <service android:name="org.npci.upi.security.pinactivitycomponent.CLRemoteServiceImpl" android:enabled="true" android:exported="false">
+            <intent-filter>
+                <action android:name="org.npci.upi.security.services.CLRemoteService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
+        <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+        <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data android:name="com.android.vending.splits" android:value="@id/0x7F15000E"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
+    </application>
+</manifest>
